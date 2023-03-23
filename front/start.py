@@ -33,26 +33,27 @@ with col1:
 
 with col3:
     if user_url:
-        # Check format of url (png or jpg):
-        if not re.match('(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpg|gif|png))(?:\?([^#]*))?(?:#(.*))?', user_url):
-            st.write('Please pass a valid url with an image')
-            user_url = None
-        else:
-            # Check if url is reachable
-            try:
-                resp_h = requests.head(user_url, timeout=7)
-                # Check if url returns an image
-                try:
-                    assert resp_h.headers['Content-Type'][:5] == 'image' # improve for png and jpg?
-                    response = requests.get(user_url, timeout=7)
-                    img_url = Image.open(BytesIO(response.content))
-                    st.image(img_url, width=500)
-                except Exception as e:
-                    st.write('Please pass a valid url with an image')
-                    user_url = None
-            except requests.exceptions.Timeout:
-                st.write('The request timed out, please check your url or try another')
+        with st.spinner("Barking..."):
+            # Check format of url (png or jpg):
+            if not re.match('(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpg|gif|png))(?:\?([^#]*))?(?:#(.*))?', user_url):
+                st.write('Please pass a valid url with an image')
                 user_url = None
+            else:
+                # Check if url is reachable
+                try:
+                    resp_h = requests.head(user_url, timeout=7)
+                    # Check if url returns an image
+                    try:
+                        assert resp_h.headers['Content-Type'][:5] == 'image' # improve for png and jpg?
+                        response = requests.get(user_url, timeout=7)
+                        img_url = Image.open(BytesIO(response.content))
+                        st.image(img_url, width=500)
+                    except Exception as e:
+                        st.write('Please pass a valid url with an image')
+                        user_url = None
+                except requests.exceptions.Timeout:
+                    st.write('The request timed out, please check your url or try another')
+                    user_url = None
 
 # TODO: deal with case when both file and url are provided
 if uploaded_file or user_url:
