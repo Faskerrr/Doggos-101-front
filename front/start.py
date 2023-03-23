@@ -3,50 +3,9 @@ import requests
 import numpy as np
 from PIL import Image
 from io import BytesIO
-import matplotlib.pyplot as plt
-import base64
-import multiprocessing
-import time
+import re
 
-# Define functions:
-
-# Convert Image to Base64
-def im_2_b64(image):
-    buff = BytesIO()
-    image.save(buff, format="PNG")
-    img_str = base64.b64encode(buff.getvalue())
-    return img_str
-
-# Convert Base64 to Image
-def b64_2_img(data):
-    buff = BytesIO(base64.b64decode(data))
-    return Image.open(buff)
-
-# Check if url is reachable - NEED?
-def url_checker(url):
-	try:
-		#Get Url
-		get = requests.get(url)
-		# if the request succeeds
-		if get.status_code == 200:
-			return(f"{url}: is reachable")
-		else:
-			return(f"{url}: is Not reachable, status_code: {get.status_code}")
-
-	#Exception
-	except requests.exceptions.RequestException as e:
-        # print URL with Errs
-		raise SystemExit(f"{url}: is Not reachable \nErr: {e}")
-
-# Check if url is reachable 2 - NEED?
-# Your foo function
-def foo(n):
-    for i in range(10000 * n):
-        response = requests.get(user_url)
-        img = Image.open(BytesIO(response.content))
-        time.sleep(1)
-
-
+from Functions.funcs import im_2_b64, b64_2_img
 
 # Code the page:
 
@@ -56,56 +15,64 @@ st.write('## Get breed predictions for a dog')
 st.write('Test url1 (working): https://www.purina.co.uk/sites/default/files/2022-07/French-Bulldog.jpg')
 st.write('Test url2 (not working): https://www.aspcapetinsurance.com/media/2325/facts-about-maltese-dogs.jpg')
 
-col1, col2 = st.columns([8,8])
+col1, col2, col3 = st.columns([8,1,8])
 with col1:
     uploaded_file = st.file_uploader(label="Upload picture of your 🐶", # image to be fed to api
                                     type=['png'])
 
-with col2:
+with col3:
     user_url = st.text_input('or pass url:')
 
-# col1, col2, col3 = st.columns([3,10,3])
+img_file, img_url = None, None
 
 with col1:
     if uploaded_file:
-        # To read file as bytes:
-        img = Image.open(uploaded_file)
-        st.image(img, width=500)
+        img_file = Image.open(uploaded_file)
+        with st.spinner("Barking..."):
+            st.image(img_file, width=500)
 
-    # elif user_url:
-    #     with col2:
-    #         with st.spinner("Barking..."):
-    #             p = multiprocessing.Process(target=foo, name="Foo", args=(10,))
-    #             p.start()
-    #             # Wait 10 seconds for foo
-    #             time.sleep(10)
-    #             # Terminate foo
-    #             p.terminate()
-    #             st.write('please check your url')
-    #             # # Cleanup
-    #             # p.join()
+with col3:
+    if user_url:
+        # Check format of url (png or jpg):
+        if not re.match('(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpg|gif|png))(?:\?([^#]*))?(?:#(.*))?', user_url):
+            st.write('Please pass a valid url with an image')
+            user_url = None
+        else:
+            # Check if url is reachable
+            try:
+                resp_h = requests.head(user_url, timeout=7)
+                # Check if url returns an image
+                try:
+                    assert resp_h.headers['Content-Type'][:5] == 'image' # improve for png and jpg?
+                    response = requests.get(user_url, timeout=7)
+                    img_url = Image.open(BytesIO(response.content))
+                    st.image(img_url, width=500)
+                except Exception as e:
+                    st.write('Please pass a valid url with an image')
+                    user_url = None
+            except requests.exceptions.Timeout:
+                st.write('The request timed out, please check your url or try another')
+                user_url = None
 
-        # st.write(url_checker(user_url)) #test_conn_1
-        # st.write(urllib.request.urlopen(user_url).getcode()) #test_conn_2
-        # response = requests.get(user_url)
-        # st.write(f'## response: {response}')
-        # img = Image.open(BytesIO(response.content))
-        # st.image(img, width=500)
+# TODO: deal with case when both file and url are provided
+if uploaded_file or user_url:
+    img = img_file or img_url
+    st.write('api will get:')
+    st.image(img, width=500)
+    ### Call api to get predictions:
 
-        # st.write('test if url is good', user_url)
+    ###
 
-    if uploaded_file or user_url:
-        pass
-        ### Call api to get predictions:
-        # img_b64 = im_2_b64(img)
-        # new_img = b64_2_img(img_b64)
-        # st.image(new_img, width=500)
-        ###
+    # Check if we have a good response
+    # if res.status_code == 200:
+        ### Display the predictions
+        # st.image(res.content, caption="Image returned from API ☝️")
 
-        # Check if we have a good response
-        # if res.status_code == 200:
-            ### Display the predictions
-            # st.image(res.content, caption="Image returned from API ☝️")
+    # with st.spinner("Barking..."):
+    #     st.write('### The closest breeds are: 1, 2, 3')
 
-        # with st.spinner("Barking..."):
-        #     st.write('### The closest breeds are: 1, 2, 3')
+# TODO: try functions from Davy
+######## Convert to bytes and decode
+    # img_b64 = im_2_b64(img)
+    # new_img = b64_2_img(img_b64)
+    # st.image(new_img, width=500)
