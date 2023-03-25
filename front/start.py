@@ -22,7 +22,7 @@ st.write('Test url3 WestHighland (working): https://i.ibb.co/TT1zCxZ/IMAGE-2023-
 st.write('Test url4 (not working locally): https://www.aspcapetinsurance.com/media/2325/facts-about-maltese-dogs.jpg')
 
 col1, col2, col3 = st.columns([8,1,8])
-# TODO: fix input to png and jpg
+# TODO: limit input to png and jpg
 with col1:
     uploaded_file = st.file_uploader(label='Upload picture of your 🐶', # image to be fed to api
                                     # type=['png, jpg']
@@ -90,12 +90,3 @@ elif uploaded_file:
             # st.write(f'{score_pred}')
         else:
             st.markdown('**Oops**, something went wrong 😓 Please try again.')
-    # st res.status_code == 200:
-
-# # TODO: deal with case when both file and url are provided
-# if uploaded_file or user_url:
-#     img = img_file or img_url
-#     # resizing and loosing quality to compress an image
-#     img_resized = img.resize((224, 224))
-#     st.write('api will get:')
-#     st.image(img_resized, width=500)
