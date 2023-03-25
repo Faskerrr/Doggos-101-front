@@ -27,3 +27,6 @@ textColor="#123c69"
 # backgroundColor="#e1b0ac"
 # secondaryBackgroundColor="#f2d4d6"
 # textColor="#213f99"
+
+[deprecation]
+showfileUploaderEncoding = False
