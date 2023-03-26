@@ -1,8 +1,17 @@
 [theme]
 primaryColor="#123c69"
-backgroundColor="#edc7b7"
+backgroundColor="#a8d0e6"
 secondaryBackgroundColor="#eee2cd"
 textColor="#123c69"
+
+[deprecation]
+showfileUploaderEncoding=false
+
+# [theme] - top
+# primaryColor="#123c69"
+# backgroundColor="#edc7b7"
+# secondaryBackgroundColor="#eee2cd"
+# textColor="#123c69"
 
 # [theme]
 # primaryColor="#ac3b61"
@@ -27,6 +36,3 @@ textColor="#123c69"
 # backgroundColor="#e1b0ac"
 # secondaryBackgroundColor="#f2d4d6"
 # textColor="#213f99"
-
-[deprecation]
-showfileUploaderEncoding=false
