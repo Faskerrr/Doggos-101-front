@@ -5,17 +5,13 @@ from io import BytesIO
 import re
 import os
 
-# need?
-# st.set_option('deprecation.showfileUploaderEncoding', False)
-
-api_url = 'http://localhost:8000'
+API_URL = 'http://localhost:8000'
 # TODO:change to docker url once it is running:
 # from dotenv import load_dotenv
 # load_dotenv()
 # url = os.getenv('API_URL')
 
-
-# Code the page:
+#select background:
 #https://wallpapercave.com/dwp2x/wp2941797.png
 #https://wallpapercave.com/dwp2x/wp4465167.jpg
 #https://i.ibb.co/TYnGjQN/backg.png
@@ -24,26 +20,34 @@ st.set_page_config(layout='wide',
                    page_icon='https://i.ibb.co/7kk5nbG/doggos-loggos-nb.png',
                    initial_sidebar_state="collapsed")
 
-page_bg_img = '''
-<style>
-.stApp {
-  background-image: url("https://wallpapercave.com/dwp2x/wp2941797.png");
-  background-size: cover;
-}
-</style>
-'''
-st.markdown(page_bg_img, unsafe_allow_html=True)
+# page_bg_img = '''
+# <style>
+# .stApp {
+#   background-image: url("https://wallpapercave.com/dwp2x/wp2941797.png");
+#   background-size: cover;
+# }
+# </style>
+# '''
+# st.markdown(page_bg_img, unsafe_allow_html=True)
 
+# print our logo?
 response = requests.get('https://i.ibb.co/7kk5nbG/doggos-loggos-nb.png')
 img_url = Image.open(BytesIO(response.content))
 st.image(img_url, width=100)
 
-st.write('## Get breed predictions for a dog')
-st.write('Test url1 (working): https://www.purina.co.uk/sites/default/files/2022-07/French-Bulldog.jpg')
-st.write('Test url2 Scotch (working): https://i.ibb.co/qkPPHgR/IMAGE-2023-03-26-01-47-08.jpg')
-st.write('Test url3 WestHighland (working): https://i.ibb.co/TT1zCxZ/IMAGE-2023-03-26-01-50-15.jpg')
-st.write('Test url4 (not working locally): https://www.aspcapetinsurance.com/media/2325/facts-about-maltese-dogs.jpg')
+# need?
+# st.set_option('deprecation.showfileUploaderEncoding', False)
 
+#_______________________________________________________________________________
+# Code the page:
+
+st.write('## Get breed predictions for a dog')
+
+# temporal for testing
+# st.write('Test url1 (working): https://www.purina.co.uk/sites/default/files/2022-07/French-Bulldog.jpg')
+# st.write('Test url2 Scotch (working): https://i.ibb.co/qkPPHgR/IMAGE-2023-03-26-01-47-08.jpg')
+# st.write('Test url3 WestHighland (working): https://i.ibb.co/TT1zCxZ/IMAGE-2023-03-26-01-50-15.jpg')
+# st.write('Test url4 (not working locally): https://www.aspcapetinsurance.com/media/2325/facts-about-maltese-dogs.jpg')
 
 
 option = st.selectbox(
@@ -90,7 +94,7 @@ if option == 'Link' and url_with_pic:
 if option == 'Link' and url_with_pic:
     with st.spinner('Barking...'):
         params = {'url_with_pic': url_with_pic}
-        res = requests.get(f'{api_url}/predict_url', params=params)
+        res = requests.get(f'{API_URL}/predict_url', params=params)
         if res.status_code == 200:
             prediction = res.json()
             st.write(f'{prediction}')
@@ -101,7 +105,7 @@ elif option == 'File' and uploaded_file:
     with st.spinner('Barking...'):
         img_bytes = uploaded_file.getvalue()
         files = {'file': BytesIO(img_bytes)}
-        res = requests.post(f'{api_url}/predict_file', files=files)
+        res = requests.post(f'{API_URL}/predict_file', files=files)
         # st.write(f'{res.status_code}')
         if res.status_code == 200:
             prediction = res.json()
