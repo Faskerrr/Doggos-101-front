@@ -4,13 +4,9 @@ import pandas as pd
 from PIL import Image
 from io import BytesIO
 import re
-import os
 
+# API_URL = 'http://localhost:8000' # local
 API_URL = 'https://doggos-101-m7gv5bfljq-ew.a.run.app/'
-# TODO:change to docker url once it is running:
-# from dotenv import load_dotenv
-# load_dotenv()
-# url = os.getenv('API_URL')
 
 #select background:
 #https://wallpapercave.com/dwp2x/wp2941797.png
@@ -82,7 +78,7 @@ if option == 'Link' and url_with_pic:
             resp_h = requests.head(url_with_pic, timeout=7)
             # Check if url returns an image
             try:
-                assert resp_h.headers['Content-Type'][:5] == 'image' # improve for png and jpg?
+                assert resp_h.headers['Content-Type'][:5] == 'image'
                 response = requests.get(url_with_pic, timeout=7)
                 img_url = Image.open(BytesIO(response.content))
                 left_co, cent_co,last_co = st.columns(3)
@@ -103,15 +99,13 @@ if option == 'Link' and url_with_pic:
             res = requests.get(f'{API_URL}/predict_url', params=params)
             if res.status_code == 200:
                 prediction = res.json()
-                # st.write(f'{prediction}')
+                prediction['score'].update((key, re.sub(r'\.(\w{2}).*', r'.\1',
+                    str(value * 100))+' %') for key, value in prediction['score'].items())
                 df = pd.DataFrame.from_dict(prediction)
                 df.prediction = df.prediction.str.replace('_', ' ')
-                df.score = round(df.score, 2)
-                # df = df.assign(hack='').set_index('hack')
-                df = df.style.format({'score': "{:.2f}"})
                 st.table(df)
             else:
-                st.markdown(f'## **Oops**, Bad response 💩 Please try again')
+                st.markdown(f'### **Oops**, Bad response 💩 Please try again')
 
 elif option == 'File' and uploaded_file:
     with cent_co:
@@ -119,15 +113,12 @@ elif option == 'File' and uploaded_file:
             img_bytes = uploaded_file.getvalue()
             files = {'file': BytesIO(img_bytes)}
             res = requests.post(f'{API_URL}/predict_file', files=files)
-            # st.write(f'{res.status_code}')
             if res.status_code == 200:
                 prediction = res.json()
-                # st.write(f'{prediction}')
+                prediction['score'].update((key, re.sub(r'\.(\w{2}).*', r'.\1',
+                    str(value * 100))+' %') for key, value in prediction['score'].items())
                 df = pd.DataFrame.from_dict(prediction)
                 df.prediction = df.prediction.str.replace('_', ' ')
-                df.score = round(df.score, 2)
-                # df = df.assign(hack='').set_index('hack')
-                df = df.style.format({'score': "{:.2f}"})
                 st.table(df)
             else:
-                st.markdown(f'## **Oops**, Bad response 💩 Please try again')
+                st.markdown(f'### **Oops**, Bad response 💩 Please try again')
