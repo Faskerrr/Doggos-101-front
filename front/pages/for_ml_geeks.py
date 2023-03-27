@@ -6,3 +6,15 @@ st.set_page_config(layout='wide',
                    initial_sidebar_state="collapsed")
 
 st.markdown('*welcome to section for geeks*')
+
+
+# add gradient background
+page_bg_img = '''
+<style>
+.stApp {
+  background-image: url("https://wallpapercave.com/dwp2x/wp2941797.png");
+  background-size: cover;
+}
+</style>
+'''
+st.markdown(page_bg_img, unsafe_allow_html=True)

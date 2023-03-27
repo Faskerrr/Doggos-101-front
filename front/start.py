@@ -17,23 +17,57 @@ st.set_page_config(layout='wide',
                    page_icon='https://i.ibb.co/7kk5nbG/doggos-loggos-nb.png',
                    initial_sidebar_state="collapsed")
 
-# page_bg_img = '''
-# <style>
-# .stApp {
-#   background-image: url("https://wallpapercave.com/dwp2x/wp2941797.png");
-#   background-size: cover;
-# }
-# </style>
-# '''
-# st.markdown(page_bg_img, unsafe_allow_html=True)
+# add gradient background
+page_bg_img = '''
+<style>
+.stApp {
+  background-image: url("https://wallpapercave.com/dwp2x/wp2941797.png");
+  background-size: cover;
+}
+</style>
+'''
+st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # print our logo?
 response = requests.get('https://i.ibb.co/7kk5nbG/doggos-loggos-nb.png')
-img_url = Image.open(BytesIO(response.content))
-st.image(img_url, width=100)
+logo = Image.open(BytesIO(response.content))
+st.image(logo, width=100)
 
-# need?
-# st.set_option('deprecation.showfileUploaderEncoding', False)
+# set css for tables:
+# https://discuss.streamlit.io/t/unable-to-center-table-cell-values-with-pandas-style-need-input-to-see-if-this-is-even-possible-with-streamlit/31852
+# th_props = [
+#   ('font-size', '14px'),
+#   ('text-align', 'left'),
+#   ('font-weight', 'bold'),
+#   ('color', '#123C69'),
+#   #('background-color', '#eeeeef'),
+#   ('border','1px solid #AD9EA1'),
+#   #('padding','12px 35px')
+# ]
+
+# td_props = [
+#   ('font-size', '14px'),
+#   ('text-align', 'center'),
+# ]
+
+# cell_hover_props = [  # for row hover use <tr> instead of <td>
+#     ('background-color', '#EEE2CD')
+# ]
+
+# headers_props = [
+#     ('text-align','center'),
+#     ('font-size','1.1em')
+# ]
+# #dict(selector='th:not(.index_name)',props=headers_props)
+
+# styles = [
+#     dict(selector="th", props=th_props),
+#     dict(selector="td", props=td_props),
+#     dict(selector="td:hover", props=cell_hover_props),
+#     # dict(selector='th.col_heading',props=headers_props),
+#     dict(selector='th.col_heading.level0', props=headers_props),
+#     dict(selector='th.col_heading.level1', props=td_props)
+# ]
 
 #_______________________________________________________________________________
 # Code the page:
@@ -70,7 +104,7 @@ if option == 'File' and uploaded_file:
 if option == 'Link' and url_with_pic:
     # Check format of url (png or jpg):
     if not re.match('(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpg|png))(?:\?([^#]*))?(?:#(.*))?', url_with_pic):
-        st.write('Please pass a valid url with an image')
+        st.write('Please pass a valid url')
         url_with_pic = None
     else:
         # Check if url is reachable
