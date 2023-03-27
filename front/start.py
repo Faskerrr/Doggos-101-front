@@ -51,10 +51,9 @@ st.write('## Get breed predictions for a dog')
 # st.write('Test url4 (not working locally): https://www.aspcapetinsurance.com/media/2325/facts-about-maltese-dogs.jpg')
 
 left_co, cent_co, last_co = st.columns(3)
-with left_co:
 
-    option = st.selectbox('Would you like to provide a file or a link to a photo of the dog?',
-                        ('File', 'Link'))
+with left_co:
+    option = st.radio('Would you like to provide a file or a link to a photo of the dog?', ('File', 'Link'))
 
 if option == 'File':
     uploaded_file = st.file_uploader(label='Upload picture of your 🐶',
@@ -112,7 +111,7 @@ if option == 'Link' and url_with_pic:
                 df = df.style.format({'score': "{:.2f}"})
                 st.table(df)
             else:
-                st.markdown(f'**Oops**, Bad response 💩 Please try again')
+                st.markdown(f'## **Oops**, Bad response 💩 Please try again')
 
 elif option == 'File' and uploaded_file:
     with cent_co:
@@ -131,15 +130,4 @@ elif option == 'File' and uploaded_file:
                 df = df.style.format({'score': "{:.2f}"})
                 st.table(df)
             else:
-                st.markdown(f'**Oops**, Bad response 💩 Please try again')
-
-# testing output reformat:
-# left_co, cent_co,last_co = st.columns(3)
-# if prediction:
-#     with cent_co:
-#         test_json = {'prediction': {'first': 'West_Highland_white_terrier', 'second': 'Maltese_dog', 'third': 'Yorkshire_terrier'}, 'score': {'first': 0.8899999856948853, 'second': 0.10000000149011612, 'third': 0.0}}
-#         df = pd.DataFrame.from_dict(prediction)
-#         df.prediction = df.prediction.str.replace('_', ' ')
-#         df.score = round(df.score, 2)
-#         df = df.style.format({'score': "{:.2f}"})
-#         st.table(df)
+                st.markdown(f'## **Oops**, Bad response 💩 Please try again')
