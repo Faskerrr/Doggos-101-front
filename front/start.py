@@ -158,7 +158,7 @@ if option == 'Link' and url_with_pic:
             else:
                 st.markdown(f'### **Oops**, Bad response 💩 Please try again')
 
-    if good_response:
+    if res.status_code == 200:
 
         # TODO: make work with images from Steve
         EX_URL = 'https://www.purina.co.uk/sites/default/files/2022-07/French-Bulldog.jpg'
@@ -244,7 +244,7 @@ elif option == 'File' and uploaded_file:
             else:
                 st.markdown(f'### **Oops**, Bad response 💩 Please try again')
 
-    if good_response:
+    if res.status_code == 200:
 
         # TODO: make work with images from Steve
         EX_URL = 'https://www.purina.co.uk/sites/default/files/2022-07/French-Bulldog.jpg'
