@@ -153,7 +153,7 @@ if option == 'Link' and url_with_pic:
                 prediction['score'].update((key, re.sub(r'\.(\w{2}).*', r'.\1',
                     str(value * 100))+'%') for key, value in prediction['score'].items())
                 df = pd.DataFrame.from_dict(prediction)
-                df.prediction = df.prediction.str.replace('_', ' ')
+                df.prediction = df.prediction.str.replace('_', ' ').str.title()
                 st.table(df)
             else:
                 st.markdown(f'### **Oops**, Bad response 💩 Please try again')
