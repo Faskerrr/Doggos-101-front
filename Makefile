@@ -7,7 +7,7 @@ install_requirements:
 # ----------------------------------
 
 streamlit:
-	-@streamlit run front/Predict.py
+	-@streamlit run front/start.py
 
 install:
 	@pip install . -U
