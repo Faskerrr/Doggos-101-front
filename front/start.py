@@ -11,7 +11,7 @@ path_tmp = os.path.dirname(__file__)
 module_path = os.path.join(path_tmp, 'funcs')
 sys.path.insert(0, module_path)
 
-from funcs.kennel_club_UK_descriptions import get_description
+from kennel_club_UK_descriptions import get_description
 
 
 # API_URL = 'http://localhost:8000' # local
