@@ -5,9 +5,6 @@ st.set_page_config(layout='wide',
                    page_icon='https://i.ibb.co/7kk5nbG/doggos-loggos-nb.png',
                    initial_sidebar_state="collapsed")
 
-st.markdown('*welcome to section for geeks*')
-
-
 # add gradient background
 page_bg_img = '''
 <style>
@@ -18,3 +15,6 @@ page_bg_img = '''
 </style>
 '''
 st.markdown(page_bg_img, unsafe_allow_html=True)
+
+
+st.markdown('*welcome to section for geeks*')

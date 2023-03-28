@@ -77,7 +77,7 @@ st.write('## Get breed predictions for a dog')
 # temporal for testing
 # st.write('Test url1 (working): https://www.purina.co.uk/sites/default/files/2022-07/French-Bulldog.jpg')
 # st.write('Test url2 Scotch (working): https://i.ibb.co/qkPPHgR/IMAGE-2023-03-26-01-47-08.jpg')
-# st.write('Test url3 WestHighland (working): https://i.ibb.co/TT1zCxZ/IMAGE-2023-03-26-01-50-15.jpg')
+st.write('Test url3 WestHighland (working): https://i.ibb.co/TT1zCxZ/IMAGE-2023-03-26-01-50-15.jpg')
 # st.write('Test url4 (not working locally): https://www.aspcapetinsurance.com/media/2325/facts-about-maltese-dogs.jpg')
 
 left_co, cent_co, last_co = st.columns(3)
@@ -91,7 +91,6 @@ if option == 'File':
                                     )
 elif option == 'Link':
     url_with_pic = st.text_input('Pass url containing picture of your 🐶:')
-
 
 img_file, img_url = None, None
 
@@ -132,14 +131,48 @@ if option == 'Link' and url_with_pic:
             params = {'url_with_pic': url_with_pic}
             res = requests.get(f'{API_URL}/predict_url', params=params)
             if res.status_code == 200:
-                prediction = res.json()
+                prediction, prediction_og, good_response = res.json(), res.json(), True
                 prediction['score'].update((key, re.sub(r'\.(\w{2}).*', r'.\1',
                     str(value * 100))+' %') for key, value in prediction['score'].items())
                 df = pd.DataFrame.from_dict(prediction)
                 df.prediction = df.prediction.str.replace('_', ' ')
                 st.table(df)
+
+                #####
+                THREASHOLD = 0.9
+                EX_URL = 'https://www.purina.co.uk/sites/default/files/2022-07/French-Bulldog.jpg'
+
+                response1 = requests.get('https://i.ibb.co/qkPPHgR/IMAGE-2023-03-26-01-47-08.jpg', timeout=7) #tmp
+                ex1_url = Image.open(BytesIO(response1.content))
+                response1 = requests.get(EX_URL, timeout=7)
+                ex2_url = Image.open(BytesIO(response1.content))
+                response1 = requests.get(EX_URL, timeout=7)
+                ex3_url = Image.open(BytesIO(response1.content))
+                ######
+
             else:
                 st.markdown(f'### **Oops**, Bad response 💩 Please try again')
+
+    # testing example images START
+    if good_response:
+        # st.write(prediction_og)
+        # st.write(type(prediction_og['score']['first']))
+        left_co, cent_co,last_co = st.columns(3)
+        with cent_co:
+            st.markdown('### Here are examples of predicted breeds:')
+
+        left_co, cent_co,last_co = st.columns(3)
+        with cent_co:
+            # if st.checkbox('Show some examples of predicted breeds'):
+                if prediction_og['score']['first'] < THREASHOLD:
+                    with left_co:
+                        st.image(ex1_url, use_column_width=True, caption=f'''{prediction['prediction']['first']}, {prediction['score']['first']} match''')
+                    with cent_co:
+                        st.image(ex2_url, use_column_width=True, caption=f'''{prediction['prediction']['second']}, {prediction['score']['second']} match''')
+                    with last_co:
+                        st.image(ex3_url, use_column_width=True, caption=f'''{prediction['prediction']['third']}, {prediction['score']['third']} match''')
+
+    # testing example images END
 
 elif option == 'File' and uploaded_file:
     with cent_co:
