@@ -4,9 +4,11 @@ import pandas as pd
 from PIL import Image
 from io import BytesIO
 import re
+from funcs.kennel_club_UK_descriptions import get_description
 
 # API_URL = 'http://localhost:8000' # local
-API_URL = 'https://doggos-101-m7gv5bfljq-ew.a.run.app/'
+# API_URL = 'https://doggos-101-m7gv5bfljq-ew.a.run.app/'
+API_URL = 'https://doggos-101selection-m7gv5bfljq-ew.a.run.app/' # new
 
 #select background:
 #https://wallpapercave.com/dwp2x/wp2941797.png
@@ -155,6 +157,10 @@ if option == 'Link' and url_with_pic:
 
     # testing example images START
     if good_response:
+        #### test descriptions
+        desc = get_description('data/uk_kc_characteristics.csv', species_name='West_Highland_white_terrier')
+        st.table(desc)
+
         # st.write(prediction_og)
         # st.write(type(prediction_og['score']['first']))
         left_co, cent_co,last_co = st.columns(3)
@@ -182,8 +188,7 @@ elif option == 'File' and uploaded_file:
             res = requests.post(f'{API_URL}/predict_file', files=files)
             if res.status_code == 200:
                 prediction = res.json()
-                prediction['score'].update((key, re.sub(r'\.(\w{2}).*', r'.\1',
-                    str(value * 100))+' %') for key, value in prediction['score'].items())
+                prediction['score'].update((key, re.sub(r'\.(\w{2}).*', r'.\1', str(value * 100))+' %') for key, value in prediction['score'].items())
                 df = pd.DataFrame.from_dict(prediction)
                 df.prediction = df.prediction.str.replace('_', ' ')
                 st.table(df)
