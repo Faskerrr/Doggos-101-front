@@ -4,9 +4,24 @@ import pandas as pd
 from PIL import Image
 from io import BytesIO
 import re
+import sys
+import os
+import glob
+
+# for deployment
+path_tmp = os.path.dirname(__file__)
+module_path = os.path.join(path_tmp, 'funcs')
+sys.path.insert(0, module_path)
+
+from kennel_club_UK_descriptions import get_description
+
+# for local testing
+# from funcs.kennel_club_UK_descriptions import get_description
+
 
 # API_URL = 'http://localhost:8000' # local
-API_URL = 'https://doggos-101-m7gv5bfljq-ew.a.run.app/'
+# API_URL = 'https://doggos-101-m7gv5bfljq-ew.a.run.app/'
+API_URL = 'https://doggos-101selection-m7gv5bfljq-ew.a.run.app/' # new
 
 #select background:
 #https://wallpapercave.com/dwp2x/wp2941797.png
@@ -72,12 +87,15 @@ st.image(logo, width=100)
 #_______________________________________________________________________________
 # Code the page:
 
+# test = glob.glob('data/examples/chichi/n02085620_242.jpg')
+# st.image(test)
+
 st.write('## Get breed predictions for a dog')
 
 # temporal for testing
 # st.write('Test url1 (working): https://www.purina.co.uk/sites/default/files/2022-07/French-Bulldog.jpg')
 # st.write('Test url2 Scotch (working): https://i.ibb.co/qkPPHgR/IMAGE-2023-03-26-01-47-08.jpg')
-st.write('Test url3 WestHighland (working): https://i.ibb.co/TT1zCxZ/IMAGE-2023-03-26-01-50-15.jpg')
+# st.write('Test url3 WestHighland (working): https://i.ibb.co/TT1zCxZ/IMAGE-2023-03-26-01-50-15.jpg')
 # st.write('Test url4 (not working locally): https://www.aspcapetinsurance.com/media/2325/facts-about-maltese-dogs.jpg')
 
 left_co, cent_co, last_co = st.columns(3)
@@ -133,46 +151,81 @@ if option == 'Link' and url_with_pic:
             if res.status_code == 200:
                 prediction, prediction_og, good_response = res.json(), res.json(), True
                 prediction['score'].update((key, re.sub(r'\.(\w{2}).*', r'.\1',
-                    str(value * 100))+' %') for key, value in prediction['score'].items())
+                    str(value * 100))+'%') for key, value in prediction['score'].items())
                 df = pd.DataFrame.from_dict(prediction)
-                df.prediction = df.prediction.str.replace('_', ' ')
+                df.prediction = df.prediction.str.replace('_', ' ').str.title()
                 st.table(df)
-
-                #####
-                THREASHOLD = 0.9
-                EX_URL = 'https://www.purina.co.uk/sites/default/files/2022-07/French-Bulldog.jpg'
-
-                response1 = requests.get('https://i.ibb.co/qkPPHgR/IMAGE-2023-03-26-01-47-08.jpg', timeout=7) #tmp
-                ex1_url = Image.open(BytesIO(response1.content))
-                response1 = requests.get(EX_URL, timeout=7)
-                ex2_url = Image.open(BytesIO(response1.content))
-                response1 = requests.get(EX_URL, timeout=7)
-                ex3_url = Image.open(BytesIO(response1.content))
-                ######
-
             else:
                 st.markdown(f'### **Oops**, Bad response 💩 Please try again')
 
-    # testing example images START
-    if good_response:
+    if res.status_code == 200:
+
+        # TODO: make work with images from Steve
+        EX_URL = 'https://www.purina.co.uk/sites/default/files/2022-07/French-Bulldog.jpg'
+
+        response1 = requests.get('https://i.ibb.co/qkPPHgR/IMAGE-2023-03-26-01-47-08.jpg', timeout=7) #tmp
+        ex1_url = Image.open(BytesIO(response1.content))
+        response1 = requests.get(EX_URL, timeout=7)
+        ex2_url = Image.open(BytesIO(response1.content))
+        response1 = requests.get(EX_URL, timeout=7)
+        ex3_url = Image.open(BytesIO(response1.content))
+
         # st.write(prediction_og)
         # st.write(type(prediction_og['score']['first']))
-        left_co, cent_co,last_co = st.columns(3)
-        with cent_co:
-            st.markdown('### Here are examples of predicted breeds:')
 
-        left_co, cent_co,last_co = st.columns(3)
-        with cent_co:
-            # if st.checkbox('Show some examples of predicted breeds'):
-                if prediction_og['score']['first'] < THREASHOLD:
-                    with left_co:
-                        st.image(ex1_url, use_column_width=True, caption=f'''{prediction['prediction']['first']}, {prediction['score']['first']} match''')
-                    with cent_co:
-                        st.image(ex2_url, use_column_width=True, caption=f'''{prediction['prediction']['second']}, {prediction['score']['second']} match''')
-                    with last_co:
-                        st.image(ex3_url, use_column_width=True, caption=f'''{prediction['prediction']['third']}, {prediction['score']['third']} match''')
+        if prediction_og['score']['first'] > 0 and prediction_og['score']['second'] > 0 and prediction_og['score']['third'] > 0:
+            left_co, cent_co,last_co = st.columns((5, 8, 1))
+            with cent_co:
+                st.markdown('### Some facts on these breeds:')
 
-    # testing example images END
+            st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['first']))
+            st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['second']))
+            st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['third']))
+
+            left_co, cent_co,last_co = st.columns((5, 8, 1))
+            with cent_co:
+                st.markdown('### Predicted breeds look like:')
+
+            left_co, cent_co,last_co = st.columns(3)
+            with left_co:
+                st.image(ex1_url, use_column_width=True, caption=f'''{df.loc['first', 'prediction']}, {prediction['score']['first']} match''')
+            with cent_co:
+                st.image(ex2_url, use_column_width=True, caption=f'''{df.loc['second', 'prediction']}, {prediction['score']['second']} match''')
+            with last_co:
+                st.image(ex3_url, use_column_width=True, caption=f'''{df.loc['third', 'prediction']}, {prediction['score']['third']} match''')
+
+        elif prediction_og['score']['first'] > 0 and prediction_og['score']['second'] > 0:
+            left_co, cent_co,last_co = st.columns((5, 8, 1))
+            with cent_co:
+                st.markdown('### Some facts on these breeds:')
+
+            st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['first']))
+            st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['second']))
+
+            left_co, cent_co,last_co = st.columns((5, 8, 1))
+            with cent_co:
+                st.markdown('### Predicted breeds look like:')
+
+            col_1, col_2, col_3, col_4 = st.columns((2, 4, 4, 2))
+            with col_2:
+                st.image(ex1_url, use_column_width=True, caption=f'''{df.loc['first', 'prediction']}, {prediction['score']['first']} match''')
+            with col_3:
+                st.image(ex2_url, use_column_width=True, caption=f'''{df.loc['second', 'prediction']}, {prediction['score']['second']} match''')
+
+        else:
+            left_co, cent_co,last_co = st.columns((5, 8, 1))
+            with cent_co:
+                st.markdown('### Some facts on these breeds:')
+
+            st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['first']))
+
+            left_co, cent_co,last_co = st.columns((5, 8, 1))
+            with cent_co:
+                st.markdown('### Predicted breeds look like:')
+
+            left_co, cent_co,last_co = st.columns(3)
+            with cent_co:
+                st.image(ex1_url, use_column_width=True, caption=f'''{df.loc['first', 'prediction']}, {prediction['score']['first']} match''')
 
 elif option == 'File' and uploaded_file:
     with cent_co:
@@ -182,10 +235,80 @@ elif option == 'File' and uploaded_file:
             res = requests.post(f'{API_URL}/predict_file', files=files)
             if res.status_code == 200:
                 prediction = res.json()
+                prediction, prediction_og, good_response = res.json(), res.json(), True
                 prediction['score'].update((key, re.sub(r'\.(\w{2}).*', r'.\1',
-                    str(value * 100))+' %') for key, value in prediction['score'].items())
+                    str(value * 100))+'%') for key, value in prediction['score'].items())
                 df = pd.DataFrame.from_dict(prediction)
-                df.prediction = df.prediction.str.replace('_', ' ')
+                df.prediction = df.prediction.str.replace('_', ' ').str.title()
                 st.table(df)
             else:
                 st.markdown(f'### **Oops**, Bad response 💩 Please try again')
+
+    if res.status_code == 200:
+
+        # TODO: make work with images from Steve
+        EX_URL = 'https://www.purina.co.uk/sites/default/files/2022-07/French-Bulldog.jpg'
+
+        response1 = requests.get('https://i.ibb.co/qkPPHgR/IMAGE-2023-03-26-01-47-08.jpg', timeout=7) #tmp
+        ex1_url = Image.open(BytesIO(response1.content))
+        response1 = requests.get(EX_URL, timeout=7)
+        ex2_url = Image.open(BytesIO(response1.content))
+        response1 = requests.get(EX_URL, timeout=7)
+        ex3_url = Image.open(BytesIO(response1.content))
+
+        # st.write(prediction_og)
+        # st.write(type(prediction_og['score']['first']))
+
+        if prediction_og['score']['first'] > 0 and prediction_og['score']['second'] > 0 and prediction_og['score']['third'] > 0:
+            left_co, cent_co,last_co = st.columns((5, 8, 1))
+            with cent_co:
+                st.markdown('### Some facts on these breeds:')
+
+            st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['first']))
+            st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['second']))
+            st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['third']))
+
+            left_co, cent_co,last_co = st.columns((5, 8, 1))
+            with cent_co:
+                st.markdown('### Predicted breeds look like:')
+
+            left_co, cent_co,last_co = st.columns(3)
+            with left_co:
+                st.image(ex1_url, use_column_width=True, caption=f'''{df.loc['first', 'prediction']}, {prediction['score']['first']} match''')
+            with cent_co:
+                st.image(ex2_url, use_column_width=True, caption=f'''{df.loc['second', 'prediction']}, {prediction['score']['second']} match''')
+            with last_co:
+                st.image(ex3_url, use_column_width=True, caption=f'''{df.loc['third', 'prediction']}, {prediction['score']['third']} match''')
+
+        elif prediction_og['score']['first'] > 0 and prediction_og['score']['second'] > 0:
+            left_co, cent_co,last_co = st.columns((5, 8, 1))
+            with cent_co:
+                st.markdown('### Some facts on these breeds:')
+
+            st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['first']))
+            st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['second']))
+
+            left_co, cent_co,last_co = st.columns((5, 8, 1))
+            with cent_co:
+                st.markdown('### Predicted breeds look like:')
+
+            col_1, col_2, col_3, col_4 = st.columns((2, 4, 4, 2))
+            with col_2:
+                st.image(ex1_url, use_column_width=True, caption=f'''{df.loc['first', 'prediction']}, {prediction['score']['first']} match''')
+            with col_3:
+                st.image(ex2_url, use_column_width=True, caption=f'''{df.loc['second', 'prediction']}, {prediction['score']['second']} match''')
+
+        else:
+            left_co, cent_co,last_co = st.columns((5, 8, 1))
+            with cent_co:
+                st.markdown('### Some facts on these breeds:')
+
+            st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['first']))
+
+            left_co, cent_co,last_co = st.columns((5, 8, 1))
+            with cent_co:
+                st.markdown('### Predicted breeds look like:')
+
+            left_co, cent_co,last_co = st.columns(3)
+            with cent_co:
+                st.image(ex1_url, use_column_width=True, caption=f'''{df.loc['first', 'prediction']}, {prediction['score']['first']} match''')
