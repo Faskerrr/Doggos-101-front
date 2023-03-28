@@ -4,7 +4,15 @@ import pandas as pd
 from PIL import Image
 from io import BytesIO
 import re
+import sys
+import os
+
+path_tmp = os.path.dirname(os.path.dirname(__file__))
+module_path = os.path.join(path_tmp, 'funcs')
+sys.path.insert(0, module_path)
+
 from funcs.kennel_club_UK_descriptions import get_description
+
 
 # API_URL = 'http://localhost:8000' # local
 # API_URL = 'https://doggos-101-m7gv5bfljq-ew.a.run.app/'
