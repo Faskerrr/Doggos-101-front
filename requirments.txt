@@ -4,3 +4,4 @@ requests
 Image
 BytesIO
 base64
+pandas
