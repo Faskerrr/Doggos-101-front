@@ -1,9 +1,3 @@
-numpy
-requests
-Image
-base64
-pandas
-glob
 matplotlib
 seaborn
 plotly
