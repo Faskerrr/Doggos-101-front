@@ -3,22 +3,17 @@ to get dog description data from kennel club'''
 
 import pandas as pd
 def clean_description_data(description_data):
-    ''' convert the kennel_club_uk spreadsheet to a nicer format'''
     description_data['class'] = description_data['class'].map(str.capitalize)
     description_data['size_of_garden'] = description_data['size_of_garden'].map(lambda x: x.replace('/ medium', ''))
-    description_data['home'] = description_data[['size_of_home', 'size_of_garden']].agg('<br>'.join, axis=1)
     description_data['town_or_country'] = description_data['town_or_country'].map({'Either': 'Yes', 'Country': 'No'})
     description_data['exercise'] = description_data['exercise'].map(lambda x: x.replace('per day', '').replace('Up to', '~').replace('More than', '>').replace('minutes', 'mins'))
-    description_data['grooming'] = description_data['grooming'].map(lambda x: x.replace('More than', 'More than <br>'))
     description_data['lifespan'] = description_data['lifespan'].map(lambda x: x.replace('Over', '>').replace('Under', '<'))
-    description_data['coat_length'] = description_data['coat_length'].map(lambda x: x.replace('&', '<br> &'))
 
-    description_data.drop(columns = ['Position', 'vulnerable_native_breed', 'size_of_garden', 'size_of_home'], inplace = True)
-
+    description_data.drop(columns = ['Position', 'vulnerable_native_breed'], inplace = True)
     description_data.index.name = None
-    description_data.columns = ['Class', 'Size', 'Daily exercise', 'Grooming', 'Fur length', 'Fur loss', 'Lifespan', 'City', 'Spacial needs']
-    return description_data[['Class', 'Size', 'Lifespan', 'Daily exercise', 'Spacial needs', 'City', 'Fur length', 'Fur loss', 'Grooming']]
 
+    description_data.columns = ['Class', 'Size', 'Daily exercise', 'Home', 'Grooming', 'Fur length', 'Fur loss', 'Lifespan', 'City', 'Garden']
+    return description_data[['Class', 'Size', 'Lifespan', 'Daily exercise', 'Home', 'Garden', 'City', 'Fur length', 'Fur loss', 'Grooming']]
 
 def clean_name(name):
     ''' converts dog name to match the names used by the kennel club UK'''
@@ -96,6 +91,6 @@ def get_description(description_data_path, species_name:str):
         descriptions = find_exact_kennel_entries(description_data, cleaned_name)
     else:
         descriptions = find_approximate_kennel_entries(description_data, cleaned_name)
-    return remove_exceptions(descriptions, cleaned_name).style
+    return remove_exceptions(descriptions, cleaned_name)
     # .style is necessary so that the output shows the "<br>" introduced in
     #  clean_description_data as linebreaks in the dataframe
