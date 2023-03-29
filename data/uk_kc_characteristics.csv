@@ -1,223 +1,231 @@
-"Position","class","breed_name","size","exercise","size_of_home","grooming","coat_length","sheds","lifespan","vulnerable_native_breed","town_or_country","size_of_garden"
-1,"TOY","Affenpinscher","Small","Up to 1 hour per day","Flat/ Apartment","More than once a week","Medium","Yes","Over 12 years","No","Either","Small/ medium garden"
-2,"HOUND","Afghan Hound","Large","More than 2 hours per day","Large house","Every day","Long","Yes","Over 10 years","No","Country","Large garden"
-3,"TERRIER","Airedale Terrier","Medium","Up to 1 hour per day","Large house","Every day","Medium","Yes","Over 10 years","No","Either","Large garden"
-4,"UTILITY","Akita","Large","More than 2 hours per day","Large house","Once a week","Short","Yes","Over 10 years","No","Either","Large garden"
-5,"WORKING","Alaskan Malamute","Large","More than 2 hours per day","Large house","Every day","Medium","Yes","Over 10 years","No","Country","Large garden"
-6,"PASTORAL","Anatolian Shepherd Dog","Large","More than 2 hours per day","Large house","More than once a week","Short","Yes","Over 10 years","No","Country","Large garden"
-7,"PASTORAL","Australian Cattle Dog","Medium","More than 2 hours per day","Small house","Once a week","Short","Yes","Over 10 years","No","Country","Small/ medium garden"
-8,"PASTORAL","Australian Shepherd","Medium","More than 2 hours per day","Large house","More than once a week","Medium","Yes","Over 10 years","No","Country","Large garden"
-9,"TOY","Australian Silky Terrier","Small","Up to 30 minutes per day","Flat/ Apartment","Every day","Medium","Yes","Over 12 years","No","Either","Small/ medium garden"
-10,"TERRIER","Australian Terrier","Small","Up to 1 hour per day","Flat/ Apartment","More than once a week","Medium","Yes","Over 12 years","No","Either","Small/ medium garden"
-11,"HOUND","Azawakh (Imp)","Medium","More than 2 hours per day","Large house","Once a week","Short","No","Over 10 years","No","Either","Large garden"
-12,"GUNDOG","Barbet (Imp)","Medium","Up to 1 hour per day","Small house","More than once a week","Medium","No","Over 10 years","No","Country","Small/ medium garden"
-13,"HOUND","Basenji","Small","Up to 1 hour per day","Small house","Once a week","Short","Yes","Over 12 years","No","Either","Small/ medium garden"
-14,"HOUND","Basset Bleu De Gascogne (Imp)","Medium","More than 2 hours per day","Small house","Once a week","Short","Yes","Over 10 years","No","Country","Large garden"
-15,"HOUND","Basset Fauve De Bretagne","Medium","More than 2 hours per day","Small house","Once a week","Medium","Yes","Over 12 years","No","Either","Large garden"
-16,"HOUND","Basset Griffon Vendeen (Grand)","Medium","More than 2 hours per day","Small house","Every day","Long","Yes","Over 10 years","No","Country","Large garden"
-17,"HOUND","Basset Griffon Vendeen (Petit)","Medium","Up to 1 hour per day","Small house","More than once a week","Medium","Yes","Over 10 years","No","Either","Small/ medium garden"
-18,"HOUND","Basset Hound","Medium","Up to 1 hour per day","Large house","Once a week","Short","Yes","Over 10 years","No","Either","Small/ medium garden"
-19,"HOUND","Bavarian Mountain Hound","Medium","More than 2 hours per day","Small house","Once a week","Short","Yes","Over 10 years","No","Country","Large garden"
-20,"HOUND","Beagle","Small","Up to 1 hour per day","Small house","Once a week","Short","Yes","Over 12 years","No","Either","Small/ medium garden"
-21,"PASTORAL","Bearded Collie","Medium","Up to 1 hour per day","Large house","Every day","Long","Yes","Over 12 years","Yes","Either","Large garden"
-22,"PASTORAL","Beauceron","Large","More than 2 hours per day","Large house","More than once a week","Medium","Yes","Over 10 years","No","Country","Large garden"
-23,"TERRIER","Bedlington Terrier","Small","Up to 1 hour per day","Small house","Once a week","Medium","No","Over 10 years","No","Either","Small/ medium garden"
-24,"PASTORAL","Belgian Shepherd Dog (Groenendael)","Medium","More than 2 hours per day","Large house","More than once a week","Medium","Yes","Over 10 years","No","Either","Large garden"
-25,"PASTORAL","Belgian Shepherd Dog (Laekenois)","Medium","More than 2 hours per day","Large house","More than once a week","Medium","Yes","Over 10 years","No","Either","Large garden"
-26,"PASTORAL","Belgian Shepherd Dog (Malinois)","Medium","More than 2 hours per day","Large house","More than once a week","Medium","Yes","Over 10 years","No","Either","Large garden"
-27,"PASTORAL","Belgian Shepherd Dog (Tervueren)","Medium","More than 2 hours per day","Large house","More than once a week","Medium","Yes","Over 10 years","No","Either","Large garden"
-28,"PASTORAL","Bergamasco (Imp)","Large","Up to 1 hour per day","Large house","More than once a week","Long","Yes","Over 12 years","No","Country","Small/ medium garden"
-29,"WORKING","Bernese Mountain Dog","Large","Up to 1 hour per day","Large house","More than once a week","Medium","Yes","Under 10 years","No","Either","Large garden"
-30,"TOY","Bichon Frise","Small","Up to 30 minutes per day","Flat/ Apartment","Every day","Medium","No","Over 12 years","No","Either","Small/ medium garden"
-31,"HOUND","Black & Tan Coonhound (Imp)","Large","Up to 1 hour per day","Large house","Once a week","Short","Yes","Over 10 years","No","Country","Large garden"
-32,"HOUND","Bloodhound","Large","More than 2 hours per day","Large house","Once a week","Short","Yes","Under 10 years","Yes","Country","Large garden"
-33,"TOY","Bolognese","Small","Up to 30 minutes per day","Flat/ Apartment","Every day","Long","No","Over 12 years","No","Either","Small/ medium garden"
-34,"PASTORAL","Border Collie","Medium","More than 2 hours per day","Small house","More than once a week","Medium","Yes","Over 12 years","No","Either","Large garden"
-35,"TERRIER","Border Terrier","Small","Up to 1 hour per day","Flat/ Apartment","More than once a week","Short","Yes","Over 12 years","No","Either","Small/ medium garden"
-36,"HOUND","Borzoi","Large","Up to 1 hour per day","Large house","More than once a week","Medium","Yes","Over 10 years","No","Country","Large garden"
-37,"UTILITY","Boston Terrier","Small","Up to 1 hour per day","Flat/ Apartment","Once a week","Short","Yes","Over 10 years","No","Either","Small/ medium garden"
-38,"WORKING","Bouvier Des Flandres","Large","Up to 1 hour per day","Large house","Every day","Medium","No","Over 10 years","No","Either","Large garden"
-39,"WORKING","Boxer","Large","More than 2 hours per day","Large house","Once a week","Short","Yes","Over 10 years","No","Either","Large garden"
-40,"GUNDOG","Bracco Italiano","Large","More than 2 hours per day","Large house","Once a week","Short","Yes","Under 10 years","No","Country","Large garden"
-41,"GUNDOG","Braque D’Auvergne (Imp)","Large","More than 2 hours per day","Large house","Once a week","Short","Yes","Over 10 years","No","Country","Large garden"
-42,"PASTORAL","Briard","Large","More than 2 hours per day","Large house","Every day","Long","Yes","Over 10 years","No","Either","Large garden"
-43,"GUNDOG","Brittany","Medium","More than 2 hours per day","Small house","More than once a week","Medium","Yes","Over 10 years","No","Country","Large garden"
-44,"TERRIER","Bull Terrier","Medium","Up to 1 hour per day","Small house","Once a week","Short","Yes","Over 10 years","No","Either","Small/ medium garden"
-45,"TERRIER","Bull Terrier (Miniature)","Small","Up to 1 hour per day","Small house","Once a week","Short","Yes","Over 10 years","Yes","Either","Small/ medium garden"
-46,"UTILITY","Bulldog","Medium","Up to 1 hour per day","Small house","Once a week","Short","Yes","Under 10 years","No","Either","Small/ medium garden"
-47,"WORKING","Bullmastiff","Large","More than 2 hours per day","Large house","Once a week","Short","Yes","Under 10 years","No","Either","Large garden"
-48,"TERRIER","Cairn Terrier","Small","Up to 1 hour per day","Flat/ Apartment","More than once a week","Medium","Yes","Over 10 years","No","Either","Small/ medium garden"
-49,"UTILITY","Canaan Dog","Medium","Up to 1 hour per day","Large house","Once a week","Short","Yes","Over 12 years","No","Either","Small/ medium garden"
-50,"WORKING","Canadian Eskimo Dog","Medium","More than 2 hours per day","Large house","Once a week","Short","Yes","Over 10 years","No","Country","Large garden"
-51,"PASTORAL","Catalan Sheepdog","Medium","Up to 1 hour per day","Small house","Once a week","Medium","No","Over 10 years","No","Either","Small/ medium garden"
-52,"TOY","Cavalier King Charles Spaniel","Small","Up to 1 hour per day","Flat/ Apartment","More than once a week","Medium","Yes","Over 12 years","No","Either","Small/ medium garden"
-53,"TERRIER","Cesky Terrier","Small","Up to 1 hour per day","Small house","More than once a week","Medium","Yes","Over 12 years","No","Either","Small/ medium garden"
-54,"TOY","Chihuahua (Long Coat)","Small","Up to 30 minutes per day","Flat/ Apartment","Once a week","Medium","Yes","Over 12 years","No","Either","Small/ medium garden"
-55,"TOY","Chihuahua (Smooth Coat)","Small","Up to 30 minutes per day","Flat/ Apartment","Once a week","Short","Yes","Over 12 years","No","Either","Small/ medium garden"
-56,"TOY","Chinese Crested","Small","Up to 30 minutes per day","Flat/ Apartment","Once a week","Short","Yes","Over 12 years","No","Either","Small/ medium garden"
-57,"UTILITY","Chow Chow","Medium","Up to 1 hour per day","Large house","Every day","Medium","Yes","Under 10 years","No","Country","Small/ medium garden"
-58,"HOUND","Cirneco Dell'Etna","Medium","Up to 1 hour per day","Small house","Once a week","Short","Yes","Over 10 years","No","Either","Small/ medium garden"
-59,"PASTORAL","Collie (Rough)","Medium","Up to 1 hour per day","Small house","Every day","Medium","Yes","Over 12 years","No","Either","Large garden"
-60,"PASTORAL","Collie (Smooth)","Medium","Up to 1 hour per day","Small house","Once a week","Short","Yes","Over 10 years","Yes","Either","Large garden"
-61,"TOY","Coton De Tulear","Small","Up to 30 minutes per day","Flat/ Apartment","Every day","Long","No","Over 12 years","No","Either","Small/ medium garden"
-62,"HOUND","Dachshund (Long Haired)","Medium","Up to 1 hour per day","Small house","More than once a week","Medium","Yes","Over 12 years","No","Either","Small/ medium garden"
-63,"HOUND","Dachshund (Miniature Long Haired)","Small","Up to 1 hour per day","Small house","More than once a week","Medium","Yes","Over 12 years","No","Either","Small/ medium garden"
-64,"HOUND","Dachshund (Miniature Smooth Haired)","Small","Up to 1 hour per day","Small house","Once a week","Short","Yes","Over 12 years","No","Either","Small/ medium garden"
-65,"HOUND","Dachshund (Miniature Wire Haired)","Small","Up to 1 hour per day","Small house","More than once a week","Medium","Yes","Over 12 years","No","Either","Small/ medium garden"
-66,"HOUND","Dachshund (Smooth Haired)","Medium","Up to 1 hour per day","Small house","Once a week","Short","Yes","Over 12 years","No","Either","Small/ medium garden"
-67,"HOUND","Dachshund (Wire Haired)","Medium","Up to 1 hour per day","Small house","More than once a week","Medium","Yes","Over 12 years","No","Either","Small/ medium garden"
-68,"UTILITY","Dalmatian","Medium","More than 2 hours per day","Large house","Once a week","Short","Yes","Over 12 years","No","Either","Large garden"
-69,"TERRIER","Dandie Dinmont Terrier","Small","Up to 1 hour per day","Small house","More than once a week","Medium","No","Over 12 years","Yes","Either","Small/ medium garden"
-70,"HOUND","Deerhound","Large","More than 2 hours per day","Large house","More than once a week","Medium","Yes","Over 10 years","Yes","Country","Large garden"
-71,"WORKING","Dobermann","Large","More than 2 hours per day","Large house","Once a week","Short","Yes","Over 10 years","No","Either","Large garden"
-72,"WORKING","Dogue de Bordeaux","Large","Up to 1 hour per day","Large house","Once a week","Short","Yes","Over 10 years","No","Country","Large garden"
-73,"GUNDOG","English Setter","Large","More than 2 hours per day","Large house","More than once a week","Medium","Yes","Over 10 years","Yes","Either","Large garden"
-74,"TOY","English Toy Terrier (Black & Tan)","Small","Up to 30 minutes per day","Flat/ Apartment","Once a week","Short","Yes","Over 12 years","Yes","Either","Small/ medium garden"
-75,"WORKING","Entlebucher Mountain Dog (Imp)","Medium","Up to 1 hour per day","Small house","Once a week","Short","Yes","Over 12 years","No","Either","Large garden"
-76,"PASTORAL","Estrela Mountain Dog","Large","Up to 1 hour per day","Large house","More than once a week","Medium","Yes","Under 10 years","No","Country","Large garden"
-77,"UTILITY","Eurasier","Medium","Up to 1 hour per day","Small house","Once a week","Medium","Yes","Over 10 years","No","Either","Small/ medium garden"
-78,"PASTORAL","Finnish Lapphund","Medium","Up to 1 hour per day","Small house","Once a week","Medium","Yes","Over 12 years","No","Either","Small/ medium garden"
-79,"HOUND","Finnish Spitz","Small","Up to 1 hour per day","Small house","More than once a week","Medium","Yes","Over 10 years","No","Either","Small/ medium garden"
-80,"TERRIER","Fox Terrier (Smooth)","Small","Up to 1 hour per day","Small house","Once a week","Short","Yes","Over 12 years","Yes","Either","Small/ medium garden"
-81,"TERRIER","Fox Terrier (Wire)","Small","Up to 1 hour per day","Small house","More than once a week","Medium","Yes","Over 12 years","No","Either","Small/ medium garden"
-82,"HOUND","Foxhound","Large","More than 2 hours per day","Large house","Once a week","Short","Yes","Over 12 years","No","Country","Large garden"
-83,"UTILITY","French Bulldog","Small","Up to 1 hour per day","Flat/ Apartment","Once a week","Short","Yes","Over 10 years","No","Either","Small/ medium garden"
-84,"GUNDOG","German Longhaired Pointer","Large","More than 2 hours per day","Large house","More than once a week","Medium","Yes","Over 10 years","No","Country","Large garden"
-85,"WORKING","German Pinscher","Medium","Up to 1 hour per day","Small house","Once a week","Short","Yes","Over 10 years","No","Either","Small/ medium garden"
-86,"PASTORAL","German Shepherd Dog","Large","More than 2 hours per day","Large house","More than once a week","Short & long","Yes","Over 10 years","No","Either","Large garden"
-87,"GUNDOG","German Shorthaired Pointer","Medium","More than 2 hours per day","Large house","Once a week","Short","Yes","Over 10 years","No","Country","Large garden"
-88,"UTILITY","German Spitz (Klein)","Small","Up to 1 hour per day","Flat/ Apartment","Every day","Medium","Yes","Over 12 years","No","Either","Small/ medium garden"
-89,"UTILITY","German Spitz (Mittel)","Medium","Up to 1 hour per day","Small house","More than once a week","Medium","Yes","Over 12 years","No","Either","Small/ medium garden"
-90,"GUNDOG","German Wirehaired Pointer","Large","More than 2 hours per day","Large house","More than once a week","Medium","Yes","Over 10 years","No","Country","Large garden"
-91,"WORKING","Giant Schnauzer","Large","More than 2 hours per day","Large house","Every day","Medium","No","Over 12 years","No","Either","Large garden"
-92,"TERRIER","Glen Of Imaal Terrier","Small","Up to 1 hour per day","Small house","More than once a week","Medium","No","Over 10 years","Yes","Country","Small/ medium garden"
-93,"GUNDOG","Gordon Setter","Large","More than 2 hours per day","Large house","More than once a week","Medium","Yes","Over 10 years","Yes","Country","Large garden"
-94,"HOUND","Grand Bleu De Gascogne (Imp)","Large","More than 2 hours per day","Large house","Once a week","Short","Yes","Under 10 years","No","Either","Large garden"
-95,"WORKING","Great Dane","Large","More than 2 hours per day","Large house","Once a week","Short","Yes","Under 10 years","No","Either","Large garden"
-96,"WORKING","Great Swiss Mountain Dog","Large","Up to 1 hour per day","Large house","Once a week","Short","Yes","Over 10 years","No","Country","Large garden"
-97,"WORKING","Greenland Dog","Large","More than 2 hours per day","Large house","Once a week","Medium","Yes","Over 10 years","No","Country","Large garden"
-98,"HOUND","Greyhound","Large","Up to 1 hour per day","Large house","Once a week","Short","Yes","Over 10 years","No","Either","Large garden"
-99,"TOY","Griffon Bruxellois","Small","Up to 30 minutes per day","Flat/ Apartment","More than once a week","Medium","Yes","Over 12 years","No","Either","Small/ medium garden"
-100,"HOUND","Griffon Fauve De Bretagne (Imp)","Medium","Up to 1 hour per day","Small house","Once a week","Medium","Yes","Over 10 years","No","Country","Small/ medium garden"
-101,"HOUND","Hamiltonstovare","Medium","More than 2 hours per day","Large house","Once a week","Short","Yes","Over 10 years","No","Country","Large garden"
-102,"HOUND","Harrier","Large","More than 2 hours per day","Large house","Once a week","Short","Yes","Over 12 years","No","Country","Large garden"
-103,"TOY","Havanese","Small","Up to 30 minutes per day","Flat/ Apartment","Every day","Long","No","Over 12 years","No","Either","Small/ medium garden"
-104,"WORKING","Hovawart","Large","More than 2 hours per day","Large house","More than once a week","Medium","Yes","Over 10 years","No","Either","Large garden"
-105,"PASTORAL","Hungarian Kuvasz (Imp)","Large","Up to 1 hour per day","Large house","More than once a week","Medium","Yes","Over 10 years","No","Country","Large garden"
-106,"PASTORAL","Hungarian Puli","Medium","Up to 1 hour per day","Small house","More than once a week","Long","No","Over 12 years","No","Either","Small/ medium garden"
-107,"PASTORAL","Hungarian Pumi","Small","Up to 1 hour per day","Small house","Once a week","Medium","No","Over 12 years","No","Either","Small/ medium garden"
-108,"GUNDOG","Hungarian Vizsla","Medium","More than 2 hours per day","Large house","Once a week","Short","Yes","Over 12 years","No","Either","Large garden"
-109,"GUNDOG","Hungarian Wirehaired Vizsla","Medium","More than 2 hours per day","Large house","More than once a week","Medium","Yes","Over 10 years","No","Either","Large garden"
-110,"HOUND","Ibizan Hound","Medium","More than 2 hours per day","Large house","Once a week","Short","Yes","Over 10 years","No","Country","Large garden"
-111,"GUNDOG","Irish Red & White Setter","Large","More than 2 hours per day","Large house","More than once a week","Medium","Yes","Over 10 years","Yes","Either","Large garden"
-112,"GUNDOG","Irish Setter","Large","More than 2 hours per day","Large house","More than once a week","Medium","Yes","Over 10 years","No","Either","Large garden"
-113,"TERRIER","Irish Terrier","Small","Up to 1 hour per day","Small house","More than once a week","Medium","Yes","Over 12 years","No","Either","Small/ medium garden"
-114,"HOUND","Irish Wolfhound","Large","More than 2 hours per day","Large house","More than once a week","Medium","Yes","Under 10 years","Yes","Country","Large garden"
-115,"TOY","Italian Greyhound","Small","Up to 1 hour per day","Small house","Once a week","Short","No","Over 12 years","No","Either","Small/ medium garden"
-116,"GUNDOG","Italian Spinone","Large","More than 2 hours per day","Large house","More than once a week","Medium","Yes","Over 10 years","No","Either","Large garden"
-117,"TERRIER","Jack Russell Terrier","Small","Up to 1 hour per day","Flat/ Apartment","Once a week","Short","Yes","Over 10 years","No","Country","Small/ medium garden"
-118,"UTILITY","Japanese Akita Inu","Large","More than 2 hours per day","Large house","More than once a week","Short","Yes","Over 10 years","No","Either","Large garden"
-119,"TOY","Japanese Chin","Small","Up to 30 minutes per day","Flat/ Apartment","More than once a week","Medium","Yes","Over 10 years","No","Either","Small/ medium garden"
-120,"UTILITY","Japanese Shiba Inu","Small","Up to 1 hour per day","Small house","Once a week","Short","Yes","Over 10 years","No","Either","Small/ medium garden"
-121,"UTILITY","Japanese Spitz","Small","Up to 1 hour per day","Small house","Every day","Medium","Yes","Over 12 years","No","Either","Small/ medium garden"
-122,"UTILITY","Keeshond","Medium","Up to 1 hour per day","Small house","Every day","Medium","Yes","Over 10 years","No","Either","Small/ medium garden"
-123,"TERRIER","Kerry Blue Terrier","Medium","Up to 1 hour per day","Small house","Once a week","Medium","No","Over 10 years","Yes","Either","Small/ medium garden"
-124,"TOY","King Charles Spaniel","Small","Up to 30 minutes per day","Flat/ Apartment","More than once a week","Medium","Yes","Over 12 years","Yes","Either","Small/ medium garden"
-125,"PASTORAL","Komondor","Large","Up to 1 hour per day","Large house","More than once a week","Long","No","Under 10 years","No","Country","Large garden"
-126,"UTILITY","Kooikerhondje","Small","Up to 1 hour per day","Small house","More than once a week","Medium","Yes","Over 12 years","No","Either","Small/ medium garden"
-127,"UTILITY","Korean Jindo (Imp)","Medium","Up to 1 hour per day","Small house","More than once a week","Medium","Yes","Over 10 years","No","Either","Small/ medium garden"
-128,"GUNDOG","Korthals Griffon (Imp)","Medium","More than 2 hours per day","Large house","More than once a week","Medium","Yes","Over 10 years","No","Country","Large garden"
-129,"GUNDOG","Lagotto Romagnolo","Small","More than 2 hours per day","Small house","More than once a week","Medium","No","Over 12 years","No","Country","Large garden"
-130,"TERRIER","Lakeland Terrier","Small","Up to 1 hour per day","Small house","More than once a week","Short","No","Over 12 years","Yes","Either","Small/ medium garden"
-131,"PASTORAL","Lancashire Heeler","Small","Up to 1 hour per day","Flat/ Apartment","Once a week","Short","Yes","Over 12 years","Yes","Either","Small/ medium garden"
-132,"GUNDOG","Large Munsterlander","Large","More than 2 hours per day","Large house","More than once a week","Medium","Yes","Over 10 years","No","Either","Large garden"
-133,"WORKING","Leonberger","Large","More than 2 hours per day","Large house","Once a week","Medium","Yes","Under 10 years","No","Country","Large garden"
-134,"UTILITY","Lhasa Apso","Small","Up to 1 hour per day","Flat/ Apartment","Every day","Long","No","Over 12 years","No","Either","Small/ medium garden"
-135,"TOY","Lowchen (Little Lion Dog)","Small","Up to 1 hour per day","Flat/ Apartment","More than once a week","Medium","Yes","Over 12 years","No","Either","Small/ medium garden"
-136,"TOY","Maltese","Small","Up to 30 minutes per day","Flat/ Apartment","Every day","Long","No","Over 12 years","No","Either","Small/ medium garden"
-137,"TERRIER","Manchester Terrier","Small","Up to 1 hour per day","Small house","Once a week","Short","Yes","Over 12 years","Yes","Either","Small/ medium garden"
-138,"PASTORAL","Maremma Sheepdog","Large","More than 2 hours per day","Large house","More than once a week","Medium","Yes","Over 10 years","No","Country","Large garden"
-139,"WORKING","Mastiff","Large","Up to 1 hour per day","Large house","Once a week","Short","Yes","Under 10 years","Yes","Country","Large garden"
-140,"TOY","Miniature Pinscher","Small","Up to 30 minutes per day","Flat/ Apartment","Once a week","Short","Yes","Over 12 years","No","Either","Small/ medium garden"
-141,"UTILITY","Miniature Schnauzer","Small","Up to 1 hour per day","Flat/ Apartment","More than once a week","Medium","No","Over 10 years","No","Either","Small/ medium garden"
-142,"WORKING","Neapolitan Mastiff","Large","Up to 1 hour per day","Large house","Once a week","Short","Yes","Under 10 years","No","Country","Large garden"
-143,"WORKING","Newfoundland","Large","Up to 1 hour per day","Large house","Every day","Medium","Yes","Under 10 years","No","Country","Large garden"
-144,"TERRIER","Norfolk Terrier","Small","Up to 1 hour per day","Flat/ Apartment","More than once a week","Medium","Yes","Over 10 years","No","Either","Small/ medium garden"
-145,"PASTORAL","Norwegian Buhund","Medium","Up to 1 hour per day","Small house","More than once a week","Short","Yes","Over 12 years","No","Either","Small/ medium garden"
-146,"HOUND","Norwegian Elkhound","Medium","Up to 1 hour per day","Large house","More than once a week","Medium","Yes","Over 10 years","No","Either","Large garden"
-147,"TERRIER","Norwich Terrier","Small","Up to 1 hour per day","Flat/ Apartment","More than once a week","Medium","Yes","Over 10 years","Yes","Either","Small/ medium garden"
-148,"PASTORAL","Old English Sheepdog","Large","More than 2 hours per day","Large house","Every day","Long","Yes","Over 10 years","Yes","Either","Large garden"
-149,"HOUND","Otterhound","Large","More than 2 hours per day","Large house","More than once a week","Medium","Yes","Over 10 years","Yes","Country","Large garden"
-150,"TOY","Papillon","Small","Up to 30 minutes per day","Flat/ Apartment","More than once a week","Medium","Yes","Over 12 years","No","Either","No garden"
-151,"TERRIER","Parson Russell Terrier","Small","Up to 1 hour per day","Small house","Once a week","Short","Yes","Over 12 years","No","Either","Small/ medium garden"
-152,"TOY","Pekingese","Small","Up to 30 minutes per day","Flat/ Apartment","Every day","Long","Yes","Over 12 years","No","Either","Small/ medium garden"
-153,"HOUND","Pharaoh Hound","Medium","More than 2 hours per day","Large house","Once a week","Short","Yes","Over 10 years","No","Country","Large garden"
-154,"PASTORAL","Picardy Sheepdog (Imp)","Medium","Up to 1 hour per day","Small house","Once a week","Medium","Yes","Over 10 years","No","Country","Small/ medium garden"
-155,"GUNDOG","Pointer","Medium","More than 2 hours per day","Large house","Once a week","Short","Yes","Over 12 years","No","Either","Large garden"
-156,"PASTORAL","Polish Lowland Sheepdog","Medium","More than 2 hours per day","Small house","Every day","Long","Yes","Over 10 years","No","Either","Large garden"
-157,"TOY","Pomeranian","Small","Up to 30 minutes per day","Flat/ Apartment","More than once a week","Medium","Yes","Over 12 years","No","Either","Small/ medium garden"
-158,"UTILITY","Poodle (Miniature)","Small","Up to 1 hour per day","Small house","Every day","Medium","No","Over 12 years","No","Either","Small/ medium garden"
-159,"UTILITY","Poodle (Standard)","Medium","Up to 1 hour per day","Large house","Every day","Medium","No","Over 12 years","No","Either","Large garden"
-160,"UTILITY","Poodle (Toy)","Small","Up to 1 hour per day","Flat/ Apartment","Every day","Medium","No","Over 12 years","No","Either","Small/ medium garden"
-161,"HOUND","Portuguese Podengo","Small","Up to 30 minutes per day","Small house","Once a week","Short","Yes","Over 10 years","No","Either","Small/ medium garden"
-162,"GUNDOG","Portuguese Pointer (Imp)","Medium","Up to 1 hour per day","Large house","Once a week","Short","Yes","Over 10 years","No","Either","Large garden"
-163,"WORKING","Portuguese Water Dog","Medium","Up to 1 hour per day","Large house","Every day","Medium","No","Over 10 years","No","Either","Small/ medium garden"
-164,"TOY","Pug","Small","Up to 1 hour per day","Flat/ Apartment","Once a week","Short","Yes","Over 10 years","No","Either","Small/ medium garden"
-165,"WORKING","Pyrenean Mastiff (Imp)","Large","Up to 1 hour per day","Large house","Every day","Medium","Yes","Under 10 years","No","Either","Large garden"
-166,"PASTORAL","Pyrenean Mountain Dog","Large","Up to 1 hour per day","Large house","More than once a week","Medium","Yes","Under 10 years","No","Either","Large garden"
-167,"PASTORAL","Pyrenean Sheepdog (Long Haired)","Medium","Up to 1 hour per day","Small house","More than once a week","Medium","Yes","Under 10 years","No","Either","Small/ medium garden"
-168,"PASTORAL","Pyrenean Sheepdog (Smooth Faced) (Imp)","Medium","Up to 1 hour per day","Small house","More than once a week","Medium","Yes","Under 10 years","No","Either","Small/ medium garden"
-169,"GUNDOG","Retriever (Chesapeake Bay)","Large","More than 2 hours per day","Large house","Once a week","Short","Yes","Over 10 years","No","Country","Large garden"
-170,"GUNDOG","Retriever (Curly Coated)","Large","More than 2 hours per day","Large house","More than once a week","Medium","Yes","Over 10 years","Yes","Either","Large garden"
-171,"GUNDOG","Retriever (Flat Coated)","Large","More than 2 hours per day","Large house","More than once a week","Medium","Yes","Under 10 years","No","Either","Large garden"
-172,"GUNDOG","Retriever (Golden)","Large","More than 2 hours per day","Large house","More than once a week","Medium","Yes","Over 10 years","No","Either","Large garden"
-173,"GUNDOG","Retriever (Labrador)","Large","More than 2 hours per day","Large house","Once a week","Short","Yes","Over 10 years","No","Either","Large garden"
-174,"GUNDOG","Retriever (Nova Scotia Duck Tolling)","Medium","Up to 1 hour per day","Small house","More than once a week","Medium","Yes","Under 10 years","No","Either","Small/ medium garden"
-175,"HOUND","Rhodesian Ridgeback","Large","More than 2 hours per day","Large house","Once a week","Short","Yes","Over 10 years","No","Either","Large garden"
-176,"WORKING","Rottweiler","Large","More than 2 hours per day","Large house","Once a week","Short","Yes","Under 10 years","No","Either","Large garden"
-177,"WORKING","Russian Black Terrier","Large","More than 2 hours per day","Large house","Every day","Medium","No","Over 10 years","No","Either","Large garden"
-178,"TOY","Russian Toy (Imp)","Small","Up to 1 hour per day","Flat/ Apartment","Every day","Short","Yes","Over 12 years","No","Either","Small/ medium garden"
-179,"HOUND","Saluki","Medium","More than 2 hours per day","Large house","Once a week","Short","Yes","Over 12 years","No","Country","Large garden"
-180,"PASTORAL","Samoyed","Medium","More than 2 hours per day","Large house","Every day","Medium","Yes","Over 10 years","No","Country","Large garden"
-181,"UTILITY","Schipperke","Small","Up to 1 hour per day","Flat/ Apartment","More than once a week","Medium","Yes","Over 12 years","No","Either","Small/ medium garden"
-182,"UTILITY","Schnauzer","Medium","Up to 1 hour per day","Small house","More than once a week","Medium","Yes","Over 10 years","No","Either","Small/ medium garden"
-183,"TERRIER","Scottish Terrier","Small","Up to 1 hour per day","Small house","Every day","Long","Yes","Over 10 years","No","Either","Small/ medium garden"
-184,"TERRIER","Sealyham Terrier","Small","Up to 1 hour per day","Small house","Every day","Long","No","Over 10 years","Yes","Either","Small/ medium garden"
-185,"UTILITY","Shar Pei","Medium","Up to 1 hour per day","Small house","Once a week","Short","Yes","Over 10 years","No","Either","Small/ medium garden"
-186,"PASTORAL","Shetland Sheepdog","Small","Up to 1 hour per day","Small house","Every day","Medium","Yes","Over 10 years","No","Either","Small/ medium garden"
-187,"UTILITY","Shih Tzu","Small","Up to 1 hour per day","Flat/ Apartment","Every day","Long","No","Over 10 years","No","Either","Small/ medium garden"
-188,"WORKING","Siberian Husky","Medium","More than 2 hours per day","Large house","More than once a week","Short","Yes","Over 10 years","No","Country","Large garden"
-189,"TERRIER","Skye Terrier","Small","Up to 1 hour per day","Small house","More than once a week","Long","Yes","Over 12 years","Yes","Either","Small/ medium garden"
-190,"HOUND","Sloughi","Medium","More than 2 hours per day","Large house","Once a week","Short","Yes","Under 10 years","No","Country","Large garden"
-191,"GUNDOG","Slovakian Rough Haired Pointer (Imp)","Large","Up to 1 hour per day","Large house","Once a week","Medium","No","Over 10 years","No","Country","Large garden"
-192,"GUNDOG","Small Munsterlander (Imp)","Medium","Up to 1 hour per day","Small house","Once a week","Medium","Yes","Over 10 years","No","Country","Small/ medium garden"
-193,"TERRIER","Soft Coated Wheaten Terrier","Medium","Up to 1 hour per day","Small house","Every day","Medium","No","Over 12 years","Yes","Either","Small/ medium garden"
-194,"GUNDOG","Spaniel (American Cocker)","Small","More than 2 hours per day","Small house","Every day","Long","Yes","Over 10 years","No","Either","Large garden"
-195,"GUNDOG","Spaniel (American Water) (Imp)","Medium","Up to 1 hour per day","Small house","Once a week","Medium","No","Over 10 years","No","Either","Small/ medium garden"
-196,"GUNDOG","Spaniel (Clumber)","Large","Up to 1 hour per day","Large house","More than once a week","Medium","Yes","Over 10 years","Yes","Country","Small/ medium garden"
-197,"GUNDOG","Spaniel (Cocker)","Small","Up to 1 hour per day","Small house","Every day","Medium","Yes","Over 10 years","No","Either","Small/ medium garden"
-198,"GUNDOG","Spaniel (English Springer)","Medium","More than 2 hours per day","Small house","More than once a week","Medium","Yes","Over 10 years","No","Either","Large garden"
-199,"GUNDOG","Spaniel (Field)","Medium","More than 2 hours per day","Small house","More than once a week","Medium","Yes","Over 10 years","Yes","Country","Large garden"
-200,"GUNDOG","Spaniel (Irish Water)","Medium","More than 2 hours per day","Large house","More than once a week","Medium","No","Under 10 years","Yes","Country","Large garden"
-201,"GUNDOG","Spaniel (Sussex)","Medium","More than 2 hours per day","Small house","More than once a week","Medium","Yes","Over 10 years","Yes","Country","Large garden"
-202,"GUNDOG","Spaniel (Welsh Springer)","Medium","More than 2 hours per day","Small house","More than once a week","Medium","Yes","Over 10 years","Yes","Either","Large garden"
-203,"GUNDOG","Spanish Water Dog","Medium","Up to 1 hour per day","Small house","More than once a week","Medium","No","Over 10 years","No","Country","Small/ medium garden"
-204,"WORKING","St. Bernard","Large","Up to 1 hour per day","Large house","More than once a week","Short","Yes","Under 10 years","No","Either","Large garden"
-205,"TERRIER","Staffordshire Bull Terrier","Small","Up to 1 hour per day","Small house","Once a week","Short","Yes","Over 12 years","No","Either","Small/ medium garden"
-206,"PASTORAL","Swedish Lapphund (Imp)","Medium","Up to 1 hour per day","Small house","Once a week","Medium","Yes","Over 10 years","No","Either","Small/ medium garden"
-207,"PASTORAL","Swedish Vallhund","Small","Up to 1 hour per day","Small house","Once a week","Short","Yes","Over 10 years","No","Either","Small/ medium garden"
-208,"WORKING","Tibetan Mastiff","Large","Up to 1 hour per day","Large house","More than once a week","Medium","Yes","Over 10 years","No","Either","Large garden"
-209,"UTILITY","Tibetan Spaniel","Small","Up to 1 hour per day","Flat/ Apartment","More than once a week","Medium","Yes","Over 12 years","No","Either","Small/ medium garden"
-210,"UTILITY","Tibetan Terrier","Small","Up to 1 hour per day","Small house","Every day","Long","No","Over 12 years","No","Either","Small/ medium garden"
-211,"PASTORAL","Turkish Kangal Dog","Large","More than 2 hours per day","Large house","More than once a week","Short","Yes","Over 10 years","No","Country","Large garden"
-212,"GUNDOG","Weimaraner","Large","More than 2 hours per day","Large house","Once a week","Short & long","Yes","Over 10 years","No","Either","Large garden"
-213,"PASTORAL","Welsh Corgi (Cardigan)","Small","Up to 1 hour per day","Small house","More than once a week","Short","Yes","Over 12 years","Yes","Either","Small/ medium garden"
-214,"PASTORAL","Welsh Corgi (Pembroke)","Small","Up to 1 hour per day","Small house","More than once a week","Short","Yes","Over 12 years","No","Either","Small/ medium garden"
-215,"TERRIER","Welsh Terrier","Small","Up to 1 hour per day","Small house","More than once a week","Medium","Yes","Over 12 years","No","Either","Small/ medium garden"
-216,"TERRIER","West Highland White Terrier","Small","Up to 1 hour per day","Flat/ Apartment","More than once a week","Medium","Yes","Over 12 years","No","Either","Small/ medium garden"
-217,"HOUND","Whippet","Small","Up to 1 hour per day","Small house","Once a week","Short","Yes","Over 12 years","No","Either","Small/ medium garden"
-218,"PASTORAL","White Swiss Shepherd Dog (Imp)","Large","More than 2 hours per day","Large house","More than once a week","Medium & long","Yes","Over 10 years","No","Either","Large garden"
-219,"UTILITY","Xoloitzcuintle (Mex Hairless) Int (Imp)","Small","Up to 1 hour per day","Small house","Once a week","Short","No","Over 10 years","No","Either","Small/ medium garden"
-220,"UTILITY","Xoloitzcuintle (Mex Hairless) Min (Imp)","Small","Up to 1 hour per day","Flat/ Apartment","Once a week","Short","No","Over 10 years","No","Either","Small/ medium garden"
-221,"UTILITY","Xoloitzcuintle (Mex Hairless) Std (Imp)","Medium","Up to 1 hour per day","Small house","Once a week","Short","No","Over 10 years","No","Either","Small/ medium garden"
-222,"TOY","Yorkshire Terrier","Small","Up to 30 minutes per day","Flat/ Apartment","Every day","Long","No","Over 12 years","No","Either","Small/ medium garden"
+Position,class,breed_name,size,exercise,size_of_home,grooming,coat_length,sheds,lifespan,vulnerable_native_breed,town_or_country,size_of_garden
+1,TOY,Affenpinscher,Small,Up to 1 hour per day,Flat/ Apartment,More than once a week,Medium,Yes,Over 12 years,No,Either,Small/ medium garden
+2,HOUND,Afghan Hound,Large,More than 2 hours per day,Large house,Every day,Long,Yes,Over 10 years,No,Country,Large garden
+3,TERRIER,Airedale Terrier,Medium,Up to 1 hour per day,Large house,Every day,Medium,Yes,Over 10 years,No,Either,Large garden
+4,UTILITY,Akita,Large,More than 2 hours per day,Large house,Once a week,Short,Yes,Over 10 years,No,Either,Large garden
+5,WORKING,Alaskan Malamute,Large,More than 2 hours per day,Large house,Every day,Medium,Yes,Over 10 years,No,Country,Large garden
+6,PASTORAL,Anatolian Shepherd Dog,Large,More than 2 hours per day,Large house,More than once a week,Short,Yes,Over 10 years,No,Country,Large garden
+7,PASTORAL,Australian Cattle Dog,Medium,More than 2 hours per day,Small house,Once a week,Short,Yes,Over 10 years,No,Country,Small/ medium garden
+8,PASTORAL,Australian Shepherd,Medium,More than 2 hours per day,Large house,More than once a week,Medium,Yes,Over 10 years,No,Country,Large garden
+9,TOY,Australian Silky Terrier,Small,Up to 30 minutes per day,Flat/ Apartment,Every day,Medium,Yes,Over 12 years,No,Either,Small/ medium garden
+10,TERRIER,Australian Terrier,Small,Up to 1 hour per day,Flat/ Apartment,More than once a week,Medium,Yes,Over 12 years,No,Either,Small/ medium garden
+11,HOUND,Azawakh (Imp),Medium,More than 2 hours per day,Large house,Once a week,Short,No,Over 10 years,No,Either,Large garden
+12,GUNDOG,Barbet (Imp),Medium,Up to 1 hour per day,Small house,More than once a week,Medium,No,Over 10 years,No,Country,Small/ medium garden
+13,HOUND,Basenji,Small,Up to 1 hour per day,Small house,Once a week,Short,Yes,Over 12 years,No,Either,Small/ medium garden
+14,HOUND,Basset Bleu De Gascogne (Imp),Medium,More than 2 hours per day,Small house,Once a week,Short,Yes,Over 10 years,No,Country,Large garden
+15,HOUND,Basset Fauve De Bretagne,Medium,More than 2 hours per day,Small house,Once a week,Medium,Yes,Over 12 years,No,Either,Large garden
+16,HOUND,Basset Griffon Vendeen (Grand),Medium,More than 2 hours per day,Small house,Every day,Long,Yes,Over 10 years,No,Country,Large garden
+17,HOUND,Basset Griffon Vendeen (Petit),Medium,Up to 1 hour per day,Small house,More than once a week,Medium,Yes,Over 10 years,No,Either,Small/ medium garden
+18,HOUND,Basset Hound,Medium,Up to 1 hour per day,Large house,Once a week,Short,Yes,Over 10 years,No,Either,Small/ medium garden
+19,HOUND,Bavarian Mountain Hound,Medium,More than 2 hours per day,Small house,Once a week,Short,Yes,Over 10 years,No,Country,Large garden
+20,HOUND,Beagle,Small,Up to 1 hour per day,Small house,Once a week,Short,Yes,Over 12 years,No,Either,Small/ medium garden
+21,PASTORAL,Bearded Collie,Medium,Up to 1 hour per day,Large house,Every day,Long,Yes,Over 12 years,Yes,Either,Large garden
+22,PASTORAL,Beauceron,Large,More than 2 hours per day,Large house,More than once a week,Medium,Yes,Over 10 years,No,Country,Large garden
+23,TERRIER,Bedlington Terrier,Small,Up to 1 hour per day,Small house,Once a week,Medium,No,Over 10 years,No,Either,Small/ medium garden
+24,PASTORAL,Belgian Shepherd Dog (Groenendael),Medium,More than 2 hours per day,Large house,More than once a week,Medium,Yes,Over 10 years,No,Either,Large garden
+25,PASTORAL,Belgian Shepherd Dog (Laekenois),Medium,More than 2 hours per day,Large house,More than once a week,Medium,Yes,Over 10 years,No,Either,Large garden
+26,PASTORAL,Belgian Shepherd Dog (Malinois),Medium,More than 2 hours per day,Large house,More than once a week,Medium,Yes,Over 10 years,No,Either,Large garden
+27,PASTORAL,Belgian Shepherd Dog (Tervueren),Medium,More than 2 hours per day,Large house,More than once a week,Medium,Yes,Over 10 years,No,Either,Large garden
+28,PASTORAL,Bergamasco (Imp),Large,Up to 1 hour per day,Large house,More than once a week,Long,Yes,Over 12 years,No,Country,Small/ medium garden
+29,WORKING,Bernese Mountain Dog,Large,Up to 1 hour per day,Large house,More than once a week,Medium,Yes,Under 10 years,No,Either,Large garden
+30,TOY,Bichon Frise,Small,Up to 30 minutes per day,Flat/ Apartment,Every day,Medium,No,Over 12 years,No,Either,Small/ medium garden
+31,HOUND,Black & Tan Coonhound (Imp),Large,Up to 1 hour per day,Large house,Once a week,Short,Yes,Over 10 years,No,Country,Large garden
+32,HOUND,Bloodhound,Large,More than 2 hours per day,Large house,Once a week,Short,Yes,Under 10 years,Yes,Country,Large garden
+33,TOY,Bolognese,Small,Up to 30 minutes per day,Flat/ Apartment,Every day,Long,No,Over 12 years,No,Either,Small/ medium garden
+34,PASTORAL,Border Collie,Medium,More than 2 hours per day,Small house,More than once a week,Medium,Yes,Over 12 years,No,Either,Large garden
+35,TERRIER,Border Terrier,Small,Up to 1 hour per day,Flat/ Apartment,More than once a week,Short,Yes,Over 12 years,No,Either,Small/ medium garden
+36,HOUND,Borzoi,Large,Up to 1 hour per day,Large house,More than once a week,Medium,Yes,Over 10 years,No,Country,Large garden
+37,UTILITY,Boston Terrier,Small,Up to 1 hour per day,Flat/ Apartment,Once a week,Short,Yes,Over 10 years,No,Either,Small/ medium garden
+38,WORKING,Bouvier Des Flandres,Large,Up to 1 hour per day,Large house,Every day,Medium,No,Over 10 years,No,Either,Large garden
+39,WORKING,Boxer,Large,More than 2 hours per day,Large house,Once a week,Short,Yes,Over 10 years,No,Either,Large garden
+40,GUNDOG,Bracco Italiano,Large,More than 2 hours per day,Large house,Once a week,Short,Yes,Under 10 years,No,Country,Large garden
+41,GUNDOG,Braque D’Auvergne (Imp),Large,More than 2 hours per day,Large house,Once a week,Short,Yes,Over 10 years,No,Country,Large garden
+42,PASTORAL,Briard,Large,More than 2 hours per day,Large house,Every day,Long,Yes,Over 10 years,No,Either,Large garden
+43,GUNDOG,Brittany,Medium,More than 2 hours per day,Small house,More than once a week,Medium,Yes,Over 10 years,No,Country,Large garden
+44,TERRIER,Bull Terrier,Medium,Up to 1 hour per day,Small house,Once a week,Short,Yes,Over 10 years,No,Either,Small/ medium garden
+45,TERRIER,Bull Terrier (Miniature),Small,Up to 1 hour per day,Small house,Once a week,Short,Yes,Over 10 years,Yes,Either,Small/ medium garden
+46,UTILITY,Bulldog,Medium,Up to 1 hour per day,Small house,Once a week,Short,Yes,Under 10 years,No,Either,Small/ medium garden
+47,WORKING,Bullmastiff,Large,More than 2 hours per day,Large house,Once a week,Short,Yes,Under 10 years,No,Either,Large garden
+48,TERRIER,Cairn Terrier,Small,Up to 1 hour per day,Flat/ Apartment,More than once a week,Medium,Yes,Over 10 years,No,Either,Small/ medium garden
+49,UTILITY,Canaan Dog,Medium,Up to 1 hour per day,Large house,Once a week,Short,Yes,Over 12 years,No,Either,Small/ medium garden
+50,WORKING,Canadian Eskimo Dog,Medium,More than 2 hours per day,Large house,Once a week,Short,Yes,Over 10 years,No,Country,Large garden
+51,PASTORAL,Catalan Sheepdog,Medium,Up to 1 hour per day,Small house,Once a week,Medium,No,Over 10 years,No,Either,Small/ medium garden
+52,TOY,Cavalier King Charles Spaniel,Small,Up to 1 hour per day,Flat/ Apartment,More than once a week,Medium,Yes,Over 12 years,No,Either,Small/ medium garden
+53,TERRIER,Cesky Terrier,Small,Up to 1 hour per day,Small house,More than once a week,Medium,Yes,Over 12 years,No,Either,Small/ medium garden
+54,TOY,Chihuahua (Long Coat),Small,Up to 30 minutes per day,Flat/ Apartment,Once a week,Medium,Yes,Over 12 years,No,Either,Small/ medium garden
+55,TOY,Chihuahua (Smooth Coat),Small,Up to 30 minutes per day,Flat/ Apartment,Once a week,Short,Yes,Over 12 years,No,Either,Small/ medium garden
+56,TOY,Chinese Crested,Small,Up to 30 minutes per day,Flat/ Apartment,Once a week,Short,Yes,Over 12 years,No,Either,Small/ medium garden
+57,UTILITY,Chow Chow,Medium,Up to 1 hour per day,Large house,Every day,Medium,Yes,Under 10 years,No,Country,Small/ medium garden
+58,HOUND,Cirneco Dell'Etna,Medium,Up to 1 hour per day,Small house,Once a week,Short,Yes,Over 10 years,No,Either,Small/ medium garden
+59,PASTORAL,Collie (Rough),Medium,Up to 1 hour per day,Small house,Every day,Medium,Yes,Over 12 years,No,Either,Large garden
+60,PASTORAL,Collie (Smooth),Medium,Up to 1 hour per day,Small house,Once a week,Short,Yes,Over 10 years,Yes,Either,Large garden
+61,TOY,Coton De Tulear,Small,Up to 30 minutes per day,Flat/ Apartment,Every day,Long,No,Over 12 years,No,Either,Small/ medium garden
+62,HOUND,Dachshund (Long Haired),Medium,Up to 1 hour per day,Small house,More than once a week,Medium,Yes,Over 12 years,No,Either,Small/ medium garden
+63,HOUND,Dachshund (Miniature Long Haired),Small,Up to 1 hour per day,Small house,More than once a week,Medium,Yes,Over 12 years,No,Either,Small/ medium garden
+64,HOUND,Dachshund (Miniature Smooth Haired),Small,Up to 1 hour per day,Small house,Once a week,Short,Yes,Over 12 years,No,Either,Small/ medium garden
+65,HOUND,Dachshund (Miniature Wire Haired),Small,Up to 1 hour per day,Small house,More than once a week,Medium,Yes,Over 12 years,No,Either,Small/ medium garden
+66,HOUND,Dachshund (Smooth Haired),Medium,Up to 1 hour per day,Small house,Once a week,Short,Yes,Over 12 years,No,Either,Small/ medium garden
+67,HOUND,Dachshund (Wire Haired),Medium,Up to 1 hour per day,Small house,More than once a week,Medium,Yes,Over 12 years,No,Either,Small/ medium garden
+68,UTILITY,Dalmatian,Medium,More than 2 hours per day,Large house,Once a week,Short,Yes,Over 12 years,No,Either,Large garden
+69,TERRIER,Dandie Dinmont Terrier,Small,Up to 1 hour per day,Small house,More than once a week,Medium,No,Over 12 years,Yes,Either,Small/ medium garden
+70,HOUND,Deerhound,Large,More than 2 hours per day,Large house,More than once a week,Medium,Yes,Over 10 years,Yes,Country,Large garden
+71,WORKING,Dobermann,Large,More than 2 hours per day,Large house,Once a week,Short,Yes,Over 10 years,No,Either,Large garden
+72,WORKING,Dogue de Bordeaux,Large,Up to 1 hour per day,Large house,Once a week,Short,Yes,Over 10 years,No,Country,Large garden
+73,GUNDOG,English Setter,Large,More than 2 hours per day,Large house,More than once a week,Medium,Yes,Over 10 years,Yes,Either,Large garden
+74,TOY,English Toy Terrier (Black & Tan),Small,Up to 30 minutes per day,Flat/ Apartment,Once a week,Short,Yes,Over 12 years,Yes,Either,Small/ medium garden
+75,WORKING,Entlebucher Mountain Dog (Imp),Medium,Up to 1 hour per day,Small house,Once a week,Short,Yes,Over 12 years,No,Either,Large garden
+76,PASTORAL,Estrela Mountain Dog,Large,Up to 1 hour per day,Large house,More than once a week,Medium,Yes,Under 10 years,No,Country,Large garden
+77,UTILITY,Eurasier,Medium,Up to 1 hour per day,Small house,Once a week,Medium,Yes,Over 10 years,No,Either,Small/ medium garden
+78,PASTORAL,Finnish Lapphund,Medium,Up to 1 hour per day,Small house,Once a week,Medium,Yes,Over 12 years,No,Either,Small/ medium garden
+79,HOUND,Finnish Spitz,Small,Up to 1 hour per day,Small house,More than once a week,Medium,Yes,Over 10 years,No,Either,Small/ medium garden
+80,TERRIER,Fox Terrier (Smooth),Small,Up to 1 hour per day,Small house,Once a week,Short,Yes,Over 12 years,Yes,Either,Small/ medium garden
+81,TERRIER,Fox Terrier (Wire),Small,Up to 1 hour per day,Small house,More than once a week,Medium,Yes,Over 12 years,No,Either,Small/ medium garden
+82,HOUND,Foxhound,Large,More than 2 hours per day,Large house,Once a week,Short,Yes,Over 12 years,No,Country,Large garden
+83,UTILITY,French Bulldog,Small,Up to 1 hour per day,Flat/ Apartment,Once a week,Short,Yes,Over 10 years,No,Either,Small/ medium garden
+84,GUNDOG,German Longhaired Pointer,Large,More than 2 hours per day,Large house,More than once a week,Medium,Yes,Over 10 years,No,Country,Large garden
+85,WORKING,German Pinscher,Medium,Up to 1 hour per day,Small house,Once a week,Short,Yes,Over 10 years,No,Either,Small/ medium garden
+86,PASTORAL,German Shepherd Dog,Large,More than 2 hours per day,Large house,More than once a week,Short & long,Yes,Over 10 years,No,Either,Large garden
+87,GUNDOG,German Shorthaired Pointer,Medium,More than 2 hours per day,Large house,Once a week,Short,Yes,Over 10 years,No,Country,Large garden
+88,UTILITY,German Spitz (Klein),Small,Up to 1 hour per day,Flat/ Apartment,Every day,Medium,Yes,Over 12 years,No,Either,Small/ medium garden
+89,UTILITY,German Spitz (Mittel),Medium,Up to 1 hour per day,Small house,More than once a week,Medium,Yes,Over 12 years,No,Either,Small/ medium garden
+90,GUNDOG,German Wirehaired Pointer,Large,More than 2 hours per day,Large house,More than once a week,Medium,Yes,Over 10 years,No,Country,Large garden
+91,WORKING,Giant Schnauzer,Large,More than 2 hours per day,Large house,Every day,Medium,No,Over 12 years,No,Either,Large garden
+92,TERRIER,Glen Of Imaal Terrier,Small,Up to 1 hour per day,Small house,More than once a week,Medium,No,Over 10 years,Yes,Country,Small/ medium garden
+93,GUNDOG,Gordon Setter,Large,More than 2 hours per day,Large house,More than once a week,Medium,Yes,Over 10 years,Yes,Country,Large garden
+94,HOUND,Grand Bleu De Gascogne (Imp),Large,More than 2 hours per day,Large house,Once a week,Short,Yes,Under 10 years,No,Either,Large garden
+95,WORKING,Great Dane,Large,More than 2 hours per day,Large house,Once a week,Short,Yes,Under 10 years,No,Either,Large garden
+96,WORKING,Great Swiss Mountain Dog,Large,Up to 1 hour per day,Large house,Once a week,Short,Yes,Over 10 years,No,Country,Large garden
+97,WORKING,Greenland Dog,Large,More than 2 hours per day,Large house,Once a week,Medium,Yes,Over 10 years,No,Country,Large garden
+98,HOUND,Greyhound,Large,Up to 1 hour per day,Large house,Once a week,Short,Yes,Over 10 years,No,Either,Large garden
+99,TOY,Griffon Bruxellois,Small,Up to 30 minutes per day,Flat/ Apartment,More than once a week,Medium,Yes,Over 12 years,No,Either,Small/ medium garden
+100,HOUND,Griffon Fauve De Bretagne (Imp),Medium,Up to 1 hour per day,Small house,Once a week,Medium,Yes,Over 10 years,No,Country,Small/ medium garden
+101,HOUND,Hamiltonstovare,Medium,More than 2 hours per day,Large house,Once a week,Short,Yes,Over 10 years,No,Country,Large garden
+102,HOUND,Harrier,Large,More than 2 hours per day,Large house,Once a week,Short,Yes,Over 12 years,No,Country,Large garden
+103,TOY,Havanese,Small,Up to 30 minutes per day,Flat/ Apartment,Every day,Long,No,Over 12 years,No,Either,Small/ medium garden
+104,WORKING,Hovawart,Large,More than 2 hours per day,Large house,More than once a week,Medium,Yes,Over 10 years,No,Either,Large garden
+105,PASTORAL,Hungarian Kuvasz (Imp),Large,Up to 1 hour per day,Large house,More than once a week,Medium,Yes,Over 10 years,No,Country,Large garden
+106,PASTORAL,Hungarian Puli,Medium,Up to 1 hour per day,Small house,More than once a week,Long,No,Over 12 years,No,Either,Small/ medium garden
+107,PASTORAL,Hungarian Pumi,Small,Up to 1 hour per day,Small house,Once a week,Medium,No,Over 12 years,No,Either,Small/ medium garden
+108,GUNDOG,Hungarian Vizsla,Medium,More than 2 hours per day,Large house,Once a week,Short,Yes,Over 12 years,No,Either,Large garden
+109,GUNDOG,Hungarian Wirehaired Vizsla,Medium,More than 2 hours per day,Large house,More than once a week,Medium,Yes,Over 10 years,No,Either,Large garden
+110,HOUND,Ibizan Hound,Medium,More than 2 hours per day,Large house,Once a week,Short,Yes,Over 10 years,No,Country,Large garden
+111,GUNDOG,Irish Red & White Setter,Large,More than 2 hours per day,Large house,More than once a week,Medium,Yes,Over 10 years,Yes,Either,Large garden
+112,GUNDOG,Irish Setter,Large,More than 2 hours per day,Large house,More than once a week,Medium,Yes,Over 10 years,No,Either,Large garden
+113,TERRIER,Irish Terrier,Small,Up to 1 hour per day,Small house,More than once a week,Medium,Yes,Over 12 years,No,Either,Small/ medium garden
+114,HOUND,Irish Wolfhound,Large,More than 2 hours per day,Large house,More than once a week,Medium,Yes,Under 10 years,Yes,Country,Large garden
+115,TOY,Italian Greyhound,Small,Up to 1 hour per day,Small house,Once a week,Short,No,Over 12 years,No,Either,Small/ medium garden
+116,GUNDOG,Italian Spinone,Large,More than 2 hours per day,Large house,More than once a week,Medium,Yes,Over 10 years,No,Either,Large garden
+117,TERRIER,Jack Russell Terrier,Small,Up to 1 hour per day,Flat/ Apartment,Once a week,Short,Yes,Over 10 years,No,Country,Small/ medium garden
+118,UTILITY,Japanese Akita Inu,Large,More than 2 hours per day,Large house,More than once a week,Short,Yes,Over 10 years,No,Either,Large garden
+119,TOY,Japanese Chin,Small,Up to 30 minutes per day,Flat/ Apartment,More than once a week,Medium,Yes,Over 10 years,No,Either,Small/ medium garden
+120,UTILITY,Japanese Shiba Inu,Small,Up to 1 hour per day,Small house,Once a week,Short,Yes,Over 10 years,No,Either,Small/ medium garden
+121,UTILITY,Japanese Spitz,Small,Up to 1 hour per day,Small house,Every day,Medium,Yes,Over 12 years,No,Either,Small/ medium garden
+122,UTILITY,Keeshond,Medium,Up to 1 hour per day,Small house,Every day,Medium,Yes,Over 10 years,No,Either,Small/ medium garden
+123,TERRIER,Kerry Blue Terrier,Medium,Up to 1 hour per day,Small house,Once a week,Medium,No,Over 10 years,Yes,Either,Small/ medium garden
+124,TOY,King Charles Spaniel,Small,Up to 30 minutes per day,Flat/ Apartment,More than once a week,Medium,Yes,Over 12 years,Yes,Either,Small/ medium garden
+125,PASTORAL,Komondor,Large,Up to 1 hour per day,Large house,More than once a week,Long,No,Under 10 years,No,Country,Large garden
+126,UTILITY,Kooikerhondje,Small,Up to 1 hour per day,Small house,More than once a week,Medium,Yes,Over 12 years,No,Either,Small/ medium garden
+127,UTILITY,Korean Jindo (Imp),Medium,Up to 1 hour per day,Small house,More than once a week,Medium,Yes,Over 10 years,No,Either,Small/ medium garden
+128,GUNDOG,Korthals Griffon (Imp),Medium,More than 2 hours per day,Large house,More than once a week,Medium,Yes,Over 10 years,No,Country,Large garden
+129,GUNDOG,Lagotto Romagnolo,Small,More than 2 hours per day,Small house,More than once a week,Medium,No,Over 12 years,No,Country,Large garden
+130,TERRIER,Lakeland Terrier,Small,Up to 1 hour per day,Small house,More than once a week,Short,No,Over 12 years,Yes,Either,Small/ medium garden
+131,PASTORAL,Lancashire Heeler,Small,Up to 1 hour per day,Flat/ Apartment,Once a week,Short,Yes,Over 12 years,Yes,Either,Small/ medium garden
+132,GUNDOG,Large Munsterlander,Large,More than 2 hours per day,Large house,More than once a week,Medium,Yes,Over 10 years,No,Either,Large garden
+133,WORKING,Leonberger,Large,More than 2 hours per day,Large house,Once a week,Medium,Yes,Under 10 years,No,Country,Large garden
+134,UTILITY,Lhasa Apso,Small,Up to 1 hour per day,Flat/ Apartment,Every day,Long,No,Over 12 years,No,Either,Small/ medium garden
+135,TOY,Lowchen (Little Lion Dog),Small,Up to 1 hour per day,Flat/ Apartment,More than once a week,Medium,Yes,Over 12 years,No,Either,Small/ medium garden
+136,TOY,Maltese,Small,Up to 30 minutes per day,Flat/ Apartment,Every day,Long,No,Over 12 years,No,Either,Small/ medium garden
+137,TERRIER,Manchester Terrier,Small,Up to 1 hour per day,Small house,Once a week,Short,Yes,Over 12 years,Yes,Either,Small/ medium garden
+138,PASTORAL,Maremma Sheepdog,Large,More than 2 hours per day,Large house,More than once a week,Medium,Yes,Over 10 years,No,Country,Large garden
+139,WORKING,Mastiff,Large,Up to 1 hour per day,Large house,Once a week,Short,Yes,Under 10 years,Yes,Country,Large garden
+140,TOY,Miniature Pinscher,Small,Up to 30 minutes per day,Flat/ Apartment,Once a week,Short,Yes,Over 12 years,No,Either,Small/ medium garden
+141,UTILITY,Miniature Schnauzer,Small,Up to 1 hour per day,Flat/ Apartment,More than once a week,Medium,No,Over 10 years,No,Either,Small/ medium garden
+142,WORKING,Neapolitan Mastiff,Large,Up to 1 hour per day,Large house,Once a week,Short,Yes,Under 10 years,No,Country,Large garden
+143,WORKING,Newfoundland,Large,Up to 1 hour per day,Large house,Every day,Medium,Yes,Under 10 years,No,Country,Large garden
+144,TERRIER,Norfolk Terrier,Small,Up to 1 hour per day,Flat/ Apartment,More than once a week,Medium,Yes,Over 10 years,No,Either,Small/ medium garden
+145,PASTORAL,Norwegian Buhund,Medium,Up to 1 hour per day,Small house,More than once a week,Short,Yes,Over 12 years,No,Either,Small/ medium garden
+146,HOUND,Norwegian Elkhound,Medium,Up to 1 hour per day,Large house,More than once a week,Medium,Yes,Over 10 years,No,Either,Large garden
+147,TERRIER,Norwich Terrier,Small,Up to 1 hour per day,Flat/ Apartment,More than once a week,Medium,Yes,Over 10 years,Yes,Either,Small/ medium garden
+148,PASTORAL,Old English Sheepdog,Large,More than 2 hours per day,Large house,Every day,Long,Yes,Over 10 years,Yes,Either,Large garden
+149,HOUND,Otterhound,Large,More than 2 hours per day,Large house,More than once a week,Medium,Yes,Over 10 years,Yes,Country,Large garden
+150,TOY,Papillon,Small,Up to 30 minutes per day,Flat/ Apartment,More than once a week,Medium,Yes,Over 12 years,No,Either,No garden
+151,TERRIER,Parson Russell Terrier,Small,Up to 1 hour per day,Small house,Once a week,Short,Yes,Over 12 years,No,Either,Small/ medium garden
+152,TOY,Pekingese,Small,Up to 30 minutes per day,Flat/ Apartment,Every day,Long,Yes,Over 12 years,No,Either,Small/ medium garden
+153,HOUND,Pharaoh Hound,Medium,More than 2 hours per day,Large house,Once a week,Short,Yes,Over 10 years,No,Country,Large garden
+154,PASTORAL,Picardy Sheepdog (Imp),Medium,Up to 1 hour per day,Small house,Once a week,Medium,Yes,Over 10 years,No,Country,Small/ medium garden
+155,GUNDOG,Pointer,Medium,More than 2 hours per day,Large house,Once a week,Short,Yes,Over 12 years,No,Either,Large garden
+156,PASTORAL,Polish Lowland Sheepdog,Medium,More than 2 hours per day,Small house,Every day,Long,Yes,Over 10 years,No,Either,Large garden
+157,TOY,Pomeranian,Small,Up to 30 minutes per day,Flat/ Apartment,More than once a week,Medium,Yes,Over 12 years,No,Either,Small/ medium garden
+158,UTILITY,Poodle (Miniature),Small,Up to 1 hour per day,Small house,Every day,Medium,No,Over 12 years,No,Either,Small/ medium garden
+159,UTILITY,Poodle (Standard),Medium,Up to 1 hour per day,Large house,Every day,Medium,No,Over 12 years,No,Either,Large garden
+160,UTILITY,Poodle (Toy),Small,Up to 1 hour per day,Flat/ Apartment,Every day,Medium,No,Over 12 years,No,Either,Small/ medium garden
+161,HOUND,Portuguese Podengo,Small,Up to 30 minutes per day,Small house,Once a week,Short,Yes,Over 10 years,No,Either,Small/ medium garden
+162,GUNDOG,Portuguese Pointer (Imp),Medium,Up to 1 hour per day,Large house,Once a week,Short,Yes,Over 10 years,No,Either,Large garden
+163,WORKING,Portuguese Water Dog,Medium,Up to 1 hour per day,Large house,Every day,Medium,No,Over 10 years,No,Either,Small/ medium garden
+164,TOY,Pug,Small,Up to 1 hour per day,Flat/ Apartment,Once a week,Short,Yes,Over 10 years,No,Either,Small/ medium garden
+165,WORKING,Pyrenean Mastiff (Imp),Large,Up to 1 hour per day,Large house,Every day,Medium,Yes,Under 10 years,No,Either,Large garden
+166,PASTORAL,Pyrenean Mountain Dog,Large,Up to 1 hour per day,Large house,More than once a week,Medium,Yes,Under 10 years,No,Either,Large garden
+167,PASTORAL,Pyrenean Sheepdog (Long Haired),Medium,Up to 1 hour per day,Small house,More than once a week,Medium,Yes,Under 10 years,No,Either,Small/ medium garden
+168,PASTORAL,Pyrenean Sheepdog (Smooth Faced) (Imp),Medium,Up to 1 hour per day,Small house,More than once a week,Medium,Yes,Under 10 years,No,Either,Small/ medium garden
+169,GUNDOG,Retriever (Chesapeake Bay),Large,More than 2 hours per day,Large house,Once a week,Short,Yes,Over 10 years,No,Country,Large garden
+170,GUNDOG,Retriever (Curly Coated),Large,More than 2 hours per day,Large house,More than once a week,Medium,Yes,Over 10 years,Yes,Either,Large garden
+171,GUNDOG,Retriever (Flat Coated),Large,More than 2 hours per day,Large house,More than once a week,Medium,Yes,Under 10 years,No,Either,Large garden
+172,GUNDOG,Retriever (Golden),Large,More than 2 hours per day,Large house,More than once a week,Medium,Yes,Over 10 years,No,Either,Large garden
+173,GUNDOG,Retriever (Labrador),Large,More than 2 hours per day,Large house,Once a week,Short,Yes,Over 10 years,No,Either,Large garden
+174,GUNDOG,Retriever (Nova Scotia Duck Tolling),Medium,Up to 1 hour per day,Small house,More than once a week,Medium,Yes,Under 10 years,No,Either,Small/ medium garden
+175,HOUND,Rhodesian Ridgeback,Large,More than 2 hours per day,Large house,Once a week,Short,Yes,Over 10 years,No,Either,Large garden
+176,WORKING,Rottweiler,Large,More than 2 hours per day,Large house,Once a week,Short,Yes,Under 10 years,No,Either,Large garden
+177,WORKING,Russian Black Terrier,Large,More than 2 hours per day,Large house,Every day,Medium,No,Over 10 years,No,Either,Large garden
+178,TOY,Russian Toy (Imp),Small,Up to 1 hour per day,Flat/ Apartment,Every day,Short,Yes,Over 12 years,No,Either,Small/ medium garden
+179,HOUND,Saluki,Medium,More than 2 hours per day,Large house,Once a week,Short,Yes,Over 12 years,No,Country,Large garden
+180,PASTORAL,Samoyed,Medium,More than 2 hours per day,Large house,Every day,Medium,Yes,Over 10 years,No,Country,Large garden
+181,UTILITY,Schipperke,Small,Up to 1 hour per day,Flat/ Apartment,More than once a week,Medium,Yes,Over 12 years,No,Either,Small/ medium garden
+182,UTILITY,Schnauzer,Medium,Up to 1 hour per day,Small house,More than once a week,Medium,Yes,Over 10 years,No,Either,Small/ medium garden
+183,TERRIER,Scottish Terrier,Small,Up to 1 hour per day,Small house,Every day,Long,Yes,Over 10 years,No,Either,Small/ medium garden
+184,TERRIER,Sealyham Terrier,Small,Up to 1 hour per day,Small house,Every day,Long,No,Over 10 years,Yes,Either,Small/ medium garden
+185,UTILITY,Shar Pei,Medium,Up to 1 hour per day,Small house,Once a week,Short,Yes,Over 10 years,No,Either,Small/ medium garden
+186,PASTORAL,Shetland Sheepdog,Small,Up to 1 hour per day,Small house,Every day,Medium,Yes,Over 10 years,No,Either,Small/ medium garden
+187,UTILITY,Shih Tzu,Small,Up to 1 hour per day,Flat/ Apartment,Every day,Long,No,Over 10 years,No,Either,Small/ medium garden
+188,WORKING,Siberian Husky,Medium,More than 2 hours per day,Large house,More than once a week,Short,Yes,Over 10 years,No,Country,Large garden
+189,TERRIER,Skye Terrier,Small,Up to 1 hour per day,Small house,More than once a week,Long,Yes,Over 12 years,Yes,Either,Small/ medium garden
+190,HOUND,Sloughi,Medium,More than 2 hours per day,Large house,Once a week,Short,Yes,Under 10 years,No,Country,Large garden
+191,GUNDOG,Slovakian Rough Haired Pointer (Imp),Large,Up to 1 hour per day,Large house,Once a week,Medium,No,Over 10 years,No,Country,Large garden
+192,GUNDOG,Small Munsterlander (Imp),Medium,Up to 1 hour per day,Small house,Once a week,Medium,Yes,Over 10 years,No,Country,Small/ medium garden
+193,TERRIER,Soft Coated Wheaten Terrier,Medium,Up to 1 hour per day,Small house,Every day,Medium,No,Over 12 years,Yes,Either,Small/ medium garden
+194,GUNDOG,Spaniel (American Cocker),Small,More than 2 hours per day,Small house,Every day,Long,Yes,Over 10 years,No,Either,Large garden
+195,GUNDOG,Spaniel (American Water) (Imp),Medium,Up to 1 hour per day,Small house,Once a week,Medium,No,Over 10 years,No,Either,Small/ medium garden
+196,GUNDOG,Spaniel (Clumber),Large,Up to 1 hour per day,Large house,More than once a week,Medium,Yes,Over 10 years,Yes,Country,Small/ medium garden
+197,GUNDOG,Spaniel (Cocker),Small,Up to 1 hour per day,Small house,Every day,Medium,Yes,Over 10 years,No,Either,Small/ medium garden
+198,GUNDOG,Spaniel (English Springer),Medium,More than 2 hours per day,Small house,More than once a week,Medium,Yes,Over 10 years,No,Either,Large garden
+199,GUNDOG,Spaniel (Field),Medium,More than 2 hours per day,Small house,More than once a week,Medium,Yes,Over 10 years,Yes,Country,Large garden
+200,GUNDOG,Spaniel (Irish Water),Medium,More than 2 hours per day,Large house,More than once a week,Medium,No,Under 10 years,Yes,Country,Large garden
+201,GUNDOG,Spaniel (Sussex),Medium,More than 2 hours per day,Small house,More than once a week,Medium,Yes,Over 10 years,Yes,Country,Large garden
+202,GUNDOG,Spaniel (Welsh Springer),Medium,More than 2 hours per day,Small house,More than once a week,Medium,Yes,Over 10 years,Yes,Either,Large garden
+203,GUNDOG,Spanish Water Dog,Medium,Up to 1 hour per day,Small house,More than once a week,Medium,No,Over 10 years,No,Country,Small/ medium garden
+204,WORKING,St. Bernard,Large,Up to 1 hour per day,Large house,More than once a week,Short,Yes,Under 10 years,No,Either,Large garden
+205,TERRIER,Staffordshire Bull Terrier,Small,Up to 1 hour per day,Small house,Once a week,Short,Yes,Over 12 years,No,Either,Small/ medium garden
+206,PASTORAL,Swedish Lapphund (Imp),Medium,Up to 1 hour per day,Small house,Once a week,Medium,Yes,Over 10 years,No,Either,Small/ medium garden
+207,PASTORAL,Swedish Vallhund,Small,Up to 1 hour per day,Small house,Once a week,Short,Yes,Over 10 years,No,Either,Small/ medium garden
+208,WORKING,Tibetan Mastiff,Large,Up to 1 hour per day,Large house,More than once a week,Medium,Yes,Over 10 years,No,Either,Large garden
+209,UTILITY,Tibetan Spaniel,Small,Up to 1 hour per day,Flat/ Apartment,More than once a week,Medium,Yes,Over 12 years,No,Either,Small/ medium garden
+210,UTILITY,Tibetan Terrier,Small,Up to 1 hour per day,Small house,Every day,Long,No,Over 12 years,No,Either,Small/ medium garden
+211,PASTORAL,Turkish Kangal Dog,Large,More than 2 hours per day,Large house,More than once a week,Short,Yes,Over 10 years,No,Country,Large garden
+212,GUNDOG,Weimaraner,Large,More than 2 hours per day,Large house,Once a week,Short & long,Yes,Over 10 years,No,Either,Large garden
+213,PASTORAL,Welsh Corgi (Cardigan),Small,Up to 1 hour per day,Small house,More than once a week,Short,Yes,Over 12 years,Yes,Either,Small/ medium garden
+214,PASTORAL,Welsh Corgi (Pembroke),Small,Up to 1 hour per day,Small house,More than once a week,Short,Yes,Over 12 years,No,Either,Small/ medium garden
+215,TERRIER,Welsh Terrier,Small,Up to 1 hour per day,Small house,More than once a week,Medium,Yes,Over 12 years,No,Either,Small/ medium garden
+216,TERRIER,West Highland White Terrier,Small,Up to 1 hour per day,Flat/ Apartment,More than once a week,Medium,Yes,Over 12 years,No,Either,Small/ medium garden
+217,HOUND,Whippet,Small,Up to 1 hour per day,Small house,Once a week,Short,Yes,Over 12 years,No,Either,Small/ medium garden
+218,PASTORAL,White Swiss Shepherd Dog (Imp),Large,More than 2 hours per day,Large house,More than once a week,Medium & long,Yes,Over 10 years,No,Either,Large garden
+219,UTILITY,Xoloitzcuintle (Mex Hairless) Int (Imp),Small,Up to 1 hour per day,Small house,Once a week,Short,No,Over 10 years,No,Either,Small/ medium garden
+220,UTILITY,Xoloitzcuintle (Mex Hairless) Min (Imp),Small,Up to 1 hour per day,Flat/ Apartment,Once a week,Short,No,Over 10 years,No,Either,Small/ medium garden
+221,UTILITY,Xoloitzcuintle (Mex Hairless) Std (Imp),Medium,Up to 1 hour per day,Small house,Once a week,Short,No,Over 10 years,No,Either,Small/ medium garden
+222,TOY,Yorkshire Terrier,Small,Up to 30 minutes per day,Flat/ Apartment,Every day,Long,No,Over 12 years,No,Either,Small/ medium garden
+223,HOUND,Bluetick Coonhound,Large,Up to 1 hour per day,Large house,Once a week,Short,Yes,Over 10 years,No,Country,Large garden
+224,WORKING,Appenzeller Sennenhund,Large,Up to 1 hour per day,Large house,Once a week,Short,Yes,Over 12 years,No,Country,Large garden
+225,HOUND,Walker Hound,Medium,More than 2 hours per day,Large House,Once a week,Short,Yes,Over 12 years,No,Country,Large garden
+226,HOUND,Redbone Coonhound,Medium,More than 2 hours per day,Large House,Once a week,Short,No,Over 12 years,No,Country,Large garden
+227,WORKING,Australian Kelpie,Medium,Up to 1 hour per day,Large House,Once a week,Short,No,Over 12 years,No,Country,Large garden
+228,WILD,Dingo,Medium,More than 2 hours per day,Australian Bush,Never,Short,No,Over 10 years,No,Country,Game reserve
+229,WILD,Dhole,Medium,More than 2 hours per day,Asian Mountains,Never,Short,No,Over 12 years,No,Country,Game reserve
+230,WILD,African Hunting Dog,Large,More than 2 hours per day,African Savanna,Never,Short,No,Over 10 years,No,Country,Game reserve
