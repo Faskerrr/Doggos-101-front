@@ -13,7 +13,7 @@ path_tmp = os.path.dirname(__file__)
 module_path = os.path.join(path_tmp, 'funcs')
 sys.path.insert(0, module_path)
 
-from kennel_club_UK_descriptions import get_description
+from kennel_club_UK_descriptions import get_description, clean_description_data
 
 # for local testing
 # from funcs.kennel_club_UK_descriptions import get_description
@@ -305,6 +305,14 @@ elif option == 'File' and uploaded_file:
             st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['second']))
 
         else:
+          ###
+            description_data = pd.read_csv(description_data_path, index_col='breed_name')
+            clean_data = clean_description_data(description_data)
+            st.wirte(f'''this is decsription raw:
+            {description_data}''')
+            st.wirte(f'''this is decsription clean:
+            {clean_data}''')
+          ###
             left_co, cent_co,last_co = st.columns((5, 8, 1))
             with cent_co:
                 st.markdown('### Predicted breeds look like:')
