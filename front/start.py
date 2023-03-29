@@ -9,11 +9,11 @@ import os
 import glob
 
 # for deployment
-path_tmp = os.path.dirname(__file__)
-module_path = os.path.join(path_tmp, 'funcs')
-sys.path.insert(0, module_path)
+# path_tmp = os.path.dirname(__file__)
+# module_path = os.path.join(path_tmp, 'funcs')
+# sys.path.insert(0, module_path)
 
-from .kennel_club_UK_descriptions import get_description
+from funcs.kennel_club_UK_descriptions import get_description
 
 # for local testing
 # from funcs.kennel_club_UK_descriptions import get_description
