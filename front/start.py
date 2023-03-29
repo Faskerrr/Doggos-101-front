@@ -184,13 +184,15 @@ if option == 'Link' and url_with_pic:
             with last_co:
                 st.image(ex3_png, use_column_width=True, caption=f'''{df.loc['third', 'prediction']}, {prediction['score']['third']} match''')
 
-        elif prediction_og['score']['first'] > 0 and prediction_og['score']['second'] > 0:
             left_co, cent_co,last_co = st.columns((5, 8, 1))
             with cent_co:
                 st.markdown('### Some facts on these breeds:')
 
             st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['first']))
             st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['second']))
+            st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['third']))
+
+        elif prediction_og['score']['first'] > 0 and prediction_og['score']['second'] > 0:
 
             left_co, cent_co,last_co = st.columns((5, 8, 1))
             with cent_co:
@@ -202,12 +204,14 @@ if option == 'Link' and url_with_pic:
             with col_3:
                 st.image(ex2_png, use_column_width=True, caption=f'''{df.loc['second', 'prediction']}, {prediction['score']['second']} match''')
 
-        else:
             left_co, cent_co,last_co = st.columns((5, 8, 1))
             with cent_co:
                 st.markdown('### Some facts on these breeds:')
 
             st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['first']))
+            st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['second']))
+
+        else:
 
             left_co, cent_co,last_co = st.columns((5, 8, 1))
             with cent_co:
@@ -217,13 +221,12 @@ if option == 'Link' and url_with_pic:
             with cent_co:
                 st.image(ex1_png, use_column_width=True, caption=f'''{df.loc['first', 'prediction']}, {prediction['score']['first']} match''')
 
-        left_co, cent_co,last_co = st.columns((5, 8, 1))
-        with cent_co:
-            st.markdown('### Some facts on these breeds:')
+            left_co, cent_co,last_co = st.columns((5, 8, 1))
+            with cent_co:
+                st.markdown('### Some facts on these breeds:')
 
-        st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['first']))
-        st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['second']))
-        st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['third']))
+            st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['first']))
+
 
 elif option == 'File' and uploaded_file:
     with cent_co:
@@ -267,13 +270,15 @@ elif option == 'File' and uploaded_file:
             with last_co:
                 st.image(ex3_png, use_column_width=True, caption=f'''{df.loc['third', 'prediction']}, {prediction['score']['third']} match''')
 
-        elif prediction_og['score']['first'] > 0 and prediction_og['score']['second'] > 0:
             left_co, cent_co,last_co = st.columns((5, 8, 1))
             with cent_co:
                 st.markdown('### Some facts on these breeds:')
 
             st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['first']))
             st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['second']))
+            st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['third']))
+
+        elif prediction_og['score']['first'] > 0 and prediction_og['score']['second'] > 0:
 
             left_co, cent_co,last_co = st.columns((5, 8, 1))
             with cent_co:
@@ -285,13 +290,14 @@ elif option == 'File' and uploaded_file:
             with col_3:
                 st.image(ex2_png, use_column_width=True, caption=f'''{df.loc['second', 'prediction']}, {prediction['score']['second']} match''')
 
-        else:
             left_co, cent_co,last_co = st.columns((5, 8, 1))
             with cent_co:
                 st.markdown('### Some facts on these breeds:')
 
             st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['first']))
+            st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['second']))
 
+        else:
             left_co, cent_co,last_co = st.columns((5, 8, 1))
             with cent_co:
                 st.markdown('### Predicted breeds look like:')
@@ -300,10 +306,8 @@ elif option == 'File' and uploaded_file:
             with cent_co:
                 st.image(ex1_png, use_column_width=True, caption=f'''{df.loc['first', 'prediction']}, {prediction['score']['first']} match''')
 
-        left_co, cent_co,last_co = st.columns((5, 8, 1))
-        with cent_co:
-            st.markdown('### Some facts on these breeds:')
+            left_co, cent_co,last_co = st.columns((5, 8, 1))
+            with cent_co:
+                st.markdown('### Some facts on these breeds:')
 
-        st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['first']))
-        st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['second']))
-        st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['third']))
+            st.table(get_description('data/uk_kc_characteristics.csv', species_name=prediction_og['prediction']['first']))
