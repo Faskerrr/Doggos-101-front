@@ -98,6 +98,7 @@ rename_ex = pd.DataFrame({'col1': os.listdir('example_images/')}, index=ex_names
 # st.write('Test url2 Scotch (working): https://i.ibb.co/qkPPHgR/IMAGE-2023-03-26-01-47-08.jpg')
 # st.write('Test url3 WestHighland (working): https://i.ibb.co/TT1zCxZ/IMAGE-2023-03-26-01-50-15.jpg')
 # st.write('Test url4 (not working locally): https://www.aspcapetinsurance.com/media/2325/facts-about-maltese-dogs.jpg')
+# st.write('Test url4 (png): https://i.ibb.co/6bMDVSb/1.png')
 
 left_co, cent_co, last_co = st.columns(3)
 
@@ -106,7 +107,7 @@ with left_co:
 
 if option == 'File':
     uploaded_file = st.file_uploader(label='Upload picture of your 🐶',
-                                    type=['jpeg', 'jpg']
+                                    type=['png', 'jpeg', 'jpg']
                                     )
 elif option == 'Link':
     url_with_pic = st.text_input('Pass url containing picture of your 🐶:')
@@ -150,7 +151,9 @@ if option == 'Link' and url_with_pic:
             params = {'url_with_pic': url_with_pic}
             res = requests.get(f'{API_URL}/predict_url', params=params)
             if res.status_code == 200:
-                prediction, prediction_og, good_response = res.json(), res.json(), True
+                prediction, prediction_og = res.json(), res.json()
+                prediction['score'] = {key: value for key, value in prediction['score'].items() if value > 0}
+                prediction['prediction'] = {key: value for key, value in prediction['prediction'].items() if key in prediction['score'].keys()}
                 prediction['score'].update((key, re.sub(r'\.(\w{2}).*', r'.\1',
                     str(value * 100))+'%') for key, value in prediction['score'].items())
                 df = pd.DataFrame.from_dict(prediction)
@@ -235,8 +238,9 @@ elif option == 'File' and uploaded_file:
             files = {'file': BytesIO(img_bytes)}
             res = requests.post(f'{API_URL}/predict_file', files=files)
             if res.status_code == 200:
-                prediction = res.json()
-                prediction, prediction_og, good_response = res.json(), res.json(), True
+                prediction, prediction_og = res.json(), res.json()
+                prediction['score'] = {key: value for key, value in prediction['score'].items() if value > 0}
+                prediction['prediction'] = {key: value for key, value in prediction['prediction'].items() if key in prediction['score'].keys()}
                 prediction['score'].update((key, re.sub(r'\.(\w{2}).*', r'.\1',
                     str(value * 100))+'%') for key, value in prediction['score'].items())
                 df = pd.DataFrame.from_dict(prediction)
