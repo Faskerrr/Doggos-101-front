@@ -31,7 +31,6 @@ def clean_name(name):
         'Bull Dog': 'Bulldog',
         'Schnauzer Standard': 'Schnauzer',
         'Blenheim Spaniel': 'King Charles Spaniel'
-        'Bluetick'
     }
     for word, correction in correction_dict.items():
         name = name.replace(word, correction)
@@ -41,19 +40,27 @@ def clean_name(name):
 def find_exact_kennel_entries(name, description_data):
     ''' returns all kennel_club UK entries with indexes that contain ALL words of species_name (order doesn't matter)
     e.g. Standard Poodle is going to be recognized as Poodle (Standard)'''
-
     index_in_kennel_data = description_data.index.map(lambda kennel_entry: all(word in kennel_entry for word in name.split()))
     return description_data[index_in_kennel_data]
 
 
 def find_approximate_kennel_entries(name, description_data):
     ''' # returns kennel_club UK entries with indexes that contains ONE word of species_name ; common words like "dog" or "hound" are ignored'''
-
     ignore_list = ['Dog', 'English', 'Terrier', 'American', 'Spaniel', 'Haired', 'Wire', 'Japanese', 'Hound', 'Scottish']
     for word in ignore_list:
         name = name.replace(word, '')
     index_in_kennel_data = description_data.index.map(lambda kennel_entry: any(word in kennel_entry for word in name.split()))
     return description_data[index_in_kennel_data]
+
+
+def exceptions(descriptions, name):
+    ''' hard coding for unwanted matches that were not removed automatically;
+    if the dog name matches a key of exceptions, the corresponding row of
+    from description is dropped '''
+    exceptions_dict = {'Collie': 'Border Collie'}
+    if name in exceptions_dict.keys():
+        descriptions.drop(exceptions_dict[name], axis=0, inplace=True)
+    return descriptions
 
 
 def get_description(description_data_path, species_name:str):
@@ -65,9 +72,10 @@ def get_description(description_data_path, species_name:str):
     '''
     description_data = pd.read_csv(description_data_path, index_col='breed_name')
     cleaned_name = clean_name(species_name)
-    #print(f'Showing results for {correction} instead of {word}')
     if cleaned_name in description_data.index:
-        return description_data.loc[[cleaned_name],:]
-    if not find_exact_kennel_entries(cleaned_name, description_data).empty:
-        return find_exact_kennel_entries(cleaned_name, description_data)
-    return find_approximate_kennel_entries(cleaned_name, description_data)
+        descriptions = description_data.loc[[cleaned_name],:]
+    elif not find_exact_kennel_entries(cleaned_name).empty:
+        descriptions = find_exact_kennel_entries(cleaned_name)
+    else:
+        descriptions = find_approximate_kennel_entries(cleaned_name)
+    return exceptions(descriptions, cleaned_name)
