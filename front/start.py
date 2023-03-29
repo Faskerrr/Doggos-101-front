@@ -19,9 +19,9 @@ from kennel_club_UK_descriptions import get_description
 # from funcs.kennel_club_UK_descriptions import get_description
 
 
-API_URL = 'http://localhost:8000' # local
+# API_URL = 'http://localhost:8000' # local
 # API_URL = 'https://doggos-101-m7gv5bfljq-ew.a.run.app/'
-# API_URL = 'https://doggos-101selection-m7gv5bfljq-ew.a.run.app/' # new
+API_URL = 'https://doggos-101selection-m7gv5bfljq-ew.a.run.app/' # new
 
 #select background:
 #https://wallpapercave.com/dwp2x/wp2941797.png
