@@ -87,10 +87,11 @@ st.image(logo, width=100)
 #_______________________________________________________________________________
 # Code the page:
 
-# test = glob.glob('data/examples/chichi/n02085620_242.jpg')
-# st.image(test)
-
 st.write('## Get breed predictions for a dog')
+
+# preload names of example images:
+ex_names = [i[:-7].lower() for i in os.listdir('example_images/')]
+rename_ex = pd.DataFrame({'col1': os.listdir('example_images/')}, index=ex_names)
 
 # temporal for testing
 # st.write('Test url1 (working): https://www.purina.co.uk/sites/default/files/2022-07/French-Bulldog.jpg')
@@ -160,18 +161,14 @@ if option == 'Link' and url_with_pic:
 
     if res.status_code == 200:
 
-        # TODO: make work with images from Steve
-        EX_URL = 'https://www.purina.co.uk/sites/default/files/2022-07/French-Bulldog.jpg'
+        ex1_png = glob.glob(f'''example_images/{rename_ex.loc[prediction_og['prediction']['first'].lower(), 'col1']}''')
+        ex2_png = glob.glob(f'''example_images/{rename_ex.loc[prediction_og['prediction']['second'].lower(), 'col1']}''')
+        ex3_png = glob.glob(f'''example_images/{rename_ex.loc[prediction_og['prediction']['third'].lower(), 'col1']}''')
 
-        response1 = requests.get('https://i.ibb.co/qkPPHgR/IMAGE-2023-03-26-01-47-08.jpg', timeout=7) #tmp
-        ex1_url = Image.open(BytesIO(response1.content))
-        response1 = requests.get(EX_URL, timeout=7)
-        ex2_url = Image.open(BytesIO(response1.content))
-        response1 = requests.get(EX_URL, timeout=7)
-        ex3_url = Image.open(BytesIO(response1.content))
+        # Use that to display references from url's:
 
-        # st.write(prediction_og)
-        # st.write(type(prediction_og['score']['first']))
+        # response1 = requests.get('https://i.ibb.co/qkPPHgR/IMAGE-2023-03-26-01-47-08.jpg', timeout=7) #tmp
+        # ex1_url = Image.open(BytesIO(response1.content))
 
         if prediction_og['score']['first'] > 0 and prediction_og['score']['second'] > 0 and prediction_og['score']['third'] > 0:
             left_co, cent_co,last_co = st.columns((5, 8, 1))
@@ -188,11 +185,11 @@ if option == 'Link' and url_with_pic:
 
             left_co, cent_co,last_co = st.columns(3)
             with left_co:
-                st.image(ex1_url, use_column_width=True, caption=f'''{df.loc['first', 'prediction']}, {prediction['score']['first']} match''')
+                st.image(ex1_png, use_column_width=True, caption=f'''{df.loc['first', 'prediction']}, {prediction['score']['first']} match''')
             with cent_co:
-                st.image(ex2_url, use_column_width=True, caption=f'''{df.loc['second', 'prediction']}, {prediction['score']['second']} match''')
+                st.image(ex2_png, use_column_width=True, caption=f'''{df.loc['second', 'prediction']}, {prediction['score']['second']} match''')
             with last_co:
-                st.image(ex3_url, use_column_width=True, caption=f'''{df.loc['third', 'prediction']}, {prediction['score']['third']} match''')
+                st.image(ex3_png, use_column_width=True, caption=f'''{df.loc['third', 'prediction']}, {prediction['score']['third']} match''')
 
         elif prediction_og['score']['first'] > 0 and prediction_og['score']['second'] > 0:
             left_co, cent_co,last_co = st.columns((5, 8, 1))
@@ -208,9 +205,9 @@ if option == 'Link' and url_with_pic:
 
             col_1, col_2, col_3, col_4 = st.columns((2, 4, 4, 2))
             with col_2:
-                st.image(ex1_url, use_column_width=True, caption=f'''{df.loc['first', 'prediction']}, {prediction['score']['first']} match''')
+                st.image(ex1_png, use_column_width=True, caption=f'''{df.loc['first', 'prediction']}, {prediction['score']['first']} match''')
             with col_3:
-                st.image(ex2_url, use_column_width=True, caption=f'''{df.loc['second', 'prediction']}, {prediction['score']['second']} match''')
+                st.image(ex2_png, use_column_width=True, caption=f'''{df.loc['second', 'prediction']}, {prediction['score']['second']} match''')
 
         else:
             left_co, cent_co,last_co = st.columns((5, 8, 1))
@@ -225,7 +222,7 @@ if option == 'Link' and url_with_pic:
 
             left_co, cent_co,last_co = st.columns(3)
             with cent_co:
-                st.image(ex1_url, use_column_width=True, caption=f'''{df.loc['first', 'prediction']}, {prediction['score']['first']} match''')
+                st.image(ex1_png, use_column_width=True, caption=f'''{df.loc['first', 'prediction']}, {prediction['score']['first']} match''')
 
 elif option == 'File' and uploaded_file:
     with cent_co:
@@ -246,18 +243,14 @@ elif option == 'File' and uploaded_file:
 
     if res.status_code == 200:
 
-        # TODO: make work with images from Steve
-        EX_URL = 'https://www.purina.co.uk/sites/default/files/2022-07/French-Bulldog.jpg'
+        ex1_png = glob.glob(f'''example_images/{rename_ex.loc[prediction_og['prediction']['first'].lower(), 'col1']}''')
+        ex2_png = glob.glob(f'''example_images/{rename_ex.loc[prediction_og['prediction']['second'].lower(), 'col1']}''')
+        ex3_png = glob.glob(f'''example_images/{rename_ex.loc[prediction_og['prediction']['third'].lower(), 'col1']}''')
 
-        response1 = requests.get('https://i.ibb.co/qkPPHgR/IMAGE-2023-03-26-01-47-08.jpg', timeout=7) #tmp
-        ex1_url = Image.open(BytesIO(response1.content))
-        response1 = requests.get(EX_URL, timeout=7)
-        ex2_url = Image.open(BytesIO(response1.content))
-        response1 = requests.get(EX_URL, timeout=7)
-        ex3_url = Image.open(BytesIO(response1.content))
+        # Use that to display references from url's:
 
-        # st.write(prediction_og)
-        # st.write(type(prediction_og['score']['first']))
+        # response1 = requests.get('https://i.ibb.co/qkPPHgR/IMAGE-2023-03-26-01-47-08.jpg', timeout=7) #tmp
+        # ex1_url = Image.open(BytesIO(response1.content))
 
         if prediction_og['score']['first'] > 0 and prediction_og['score']['second'] > 0 and prediction_og['score']['third'] > 0:
             left_co, cent_co,last_co = st.columns((5, 8, 1))
@@ -274,11 +267,11 @@ elif option == 'File' and uploaded_file:
 
             left_co, cent_co,last_co = st.columns(3)
             with left_co:
-                st.image(ex1_url, use_column_width=True, caption=f'''{df.loc['first', 'prediction']}, {prediction['score']['first']} match''')
+                st.image(ex1_png, use_column_width=True, caption=f'''{df.loc['first', 'prediction']}, {prediction['score']['first']} match''')
             with cent_co:
-                st.image(ex2_url, use_column_width=True, caption=f'''{df.loc['second', 'prediction']}, {prediction['score']['second']} match''')
+                st.image(ex2_png, use_column_width=True, caption=f'''{df.loc['second', 'prediction']}, {prediction['score']['second']} match''')
             with last_co:
-                st.image(ex3_url, use_column_width=True, caption=f'''{df.loc['third', 'prediction']}, {prediction['score']['third']} match''')
+                st.image(ex3_png, use_column_width=True, caption=f'''{df.loc['third', 'prediction']}, {prediction['score']['third']} match''')
 
         elif prediction_og['score']['first'] > 0 and prediction_og['score']['second'] > 0:
             left_co, cent_co,last_co = st.columns((5, 8, 1))
@@ -294,9 +287,9 @@ elif option == 'File' and uploaded_file:
 
             col_1, col_2, col_3, col_4 = st.columns((2, 4, 4, 2))
             with col_2:
-                st.image(ex1_url, use_column_width=True, caption=f'''{df.loc['first', 'prediction']}, {prediction['score']['first']} match''')
+                st.image(ex1_png, use_column_width=True, caption=f'''{df.loc['first', 'prediction']}, {prediction['score']['first']} match''')
             with col_3:
-                st.image(ex2_url, use_column_width=True, caption=f'''{df.loc['second', 'prediction']}, {prediction['score']['second']} match''')
+                st.image(ex2_png, use_column_width=True, caption=f'''{df.loc['second', 'prediction']}, {prediction['score']['second']} match''')
 
         else:
             left_co, cent_co,last_co = st.columns((5, 8, 1))
@@ -311,4 +304,4 @@ elif option == 'File' and uploaded_file:
 
             left_co, cent_co,last_co = st.columns(3)
             with cent_co:
-                st.image(ex1_url, use_column_width=True, caption=f'''{df.loc['first', 'prediction']}, {prediction['score']['first']} match''')
+                st.image(ex1_png, use_column_width=True, caption=f'''{df.loc['first', 'prediction']}, {prediction['score']['first']} match''')
