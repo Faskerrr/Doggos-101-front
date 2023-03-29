@@ -6,7 +6,6 @@ BytesIO
 base64
 pandas
 glob
-matplotlib.pyplot
+matplotlib
 seaborn
-plotly.express as px
-plotly.graph_objects as go
+plotly
