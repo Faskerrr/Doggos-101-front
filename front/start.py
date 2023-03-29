@@ -44,10 +44,10 @@ page_bg_img = '''
 '''
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
-# print our logo?
-response = requests.get('https://i.ibb.co/7kk5nbG/doggos-loggos-nb.png')
+# print our logo? https://i.ibb.co/7kk5nbG/doggos-loggos-nb.png https://i.ibb.co/pzS26yL/doggos-loggos-nb-txt.png
+response = requests.get('https://i.ibb.co/n7zX33C/doggos-loggos-nb-txt.png')
 logo = Image.open(BytesIO(response.content))
-st.image(logo, width=100)
+st.image(logo, width=275)
 
 # set css for tables:
 # https://discuss.streamlit.io/t/unable-to-center-table-cell-values-with-pandas-style-need-input-to-see-if-this-is-even-possible-with-streamlit/31852
