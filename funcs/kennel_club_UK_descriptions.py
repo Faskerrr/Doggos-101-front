@@ -53,14 +53,14 @@ def clean_name(name):
     return name
 
 
-def find_exact_kennel_entries(name, description_data):
+def find_exact_kennel_entries(description_data, name):
     ''' returns all kennel_club UK entries with indexes that contain ALL words of species_name (order doesn't matter)
     e.g. Standard Poodle is going to be recognized as Poodle (Standard)'''
     index_in_kennel_data = description_data.index.map(lambda kennel_entry: all(word in kennel_entry for word in name.split()))
     return description_data[index_in_kennel_data]
 
 
-def find_approximate_kennel_entries(name, description_data):
+def find_approximate_kennel_entries(description_data, name):
     ''' # returns kennel_club UK entries with indexes that contains ONE word of species_name ; common words like "dog" or "hound" are ignored'''
     ignore_list = ['Dog', 'English', 'Terrier', 'American', 'Spaniel', 'Haired', 'Wire', 'Japanese', 'Hound', 'Scottish']
     for word in ignore_list:
