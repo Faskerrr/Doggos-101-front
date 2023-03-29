@@ -159,7 +159,8 @@ if option == 'Link' and url_with_pic:
                     str(value * 100))+'%') for key, value in prediction['score'].items())
                 df = pd.DataFrame.from_dict(prediction)
                 df.prediction = df.prediction.str.replace('_', ' ').str.title()
-                st.table(df)
+                hdf = df.assign(hack='').set_index('hack')
+                st.table(hdf)
             else:
                 st.markdown(f'### **Oops**, Bad response 💩 Please try again')
 
@@ -246,7 +247,8 @@ elif option == 'File' and uploaded_file:
                     str(value * 100))+'%') for key, value in prediction['score'].items())
                 df = pd.DataFrame.from_dict(prediction)
                 df.prediction = df.prediction.str.replace('_', ' ').str.title()
-                st.table(df)
+                hdf = df.assign(hack='').set_index('hack')
+                st.table(hdf)
             else:
                 st.markdown(f'### **Oops**, Bad response 💩 Please try again')
 
