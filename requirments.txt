@@ -6,3 +6,7 @@ BytesIO
 base64
 pandas
 glob
+matplotlib.pyplot
+seaborn
+plotly.express
+plotly.graph_objects
