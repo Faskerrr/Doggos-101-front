@@ -65,26 +65,16 @@ with st.expander("See details"):
 # MODEL
 st.header(":computer: About the model")
 with st.expander("See details"):
-    _, col_text, _, col_inception, col_resnet = st.columns([0.2,3,0.2,2,2])
-
-    col_text.markdown("""
+    st.markdown("""
                 ### Multiclass image classification using Transfer learning:
                 - **Use pretrained models (*Inception_V3* and *Resnet50*)**
                 - **Use data augmentation**
                 - **Modify the dense layers to meet the purpose of our task.**""")
 
 
-    col_inception.markdown("""
-                           #####
-                           ##### Model 1 using Inception_V3:""")
-    image_inception = Image.open("./data/model_inception.png")
-    col_inception.image(image_inception, width=300)
-
-    col_resnet.markdown("""
-                        #####
-                        ##### Model 2 using Resnet50:""")
-    image_resnet = Image.open("./data/model_resnet.png")
-    col_resnet.image(image_resnet, width=300)
+    _, col_models,_ = st.columns([0.2,4,0.2])
+    image_models = Image.open("./data/Models.png")
+    col_models.image(image_models)
 
 # CLASSIFICATION REPORT
 # add the classification report
@@ -142,10 +132,10 @@ with st.expander("See details"):
     st.subheader("Examples of two least recognized breeds")
     _, col_dog1, col_dog2, _ = st.columns([2,2,2,1])
 
-    dog1 = Image.open("./data/dog1.jpg")
+    dog1 = Image.open("./data/dog1.png")
     col_dog1.image(dog1, caption="Eskimo dog", width=300)
 
-    dog2 = Image.open("./data/dog2.jpg")
+    dog2 = Image.open("./data/dog2.png")
     col_dog2.image(dog2, caption="Siberian husky", width=300)
 
 # CONFUSION MATRIX
@@ -171,9 +161,9 @@ st.header(":frame_with_picture: Activation images after some convolutional layer
 with st.expander("See the effects of 12 kernels of the first convolutional layer"):
     _, col_img1, col_img2, _ = st.columns([0.5,2,2,0.5])
     image1 = Image.open("./data/activation_img1.png")
-    col_img1.image(image1)
+    col_img1.image(image1, width=500)
     image2 = Image.open("./data/activation_img2.png")
-    col_img2.image(image2)
+    col_img2.image(image2, width=500)
 
 with st.expander("See the effects of all kernels of some convolutional layers"):
     _, col_img, _ = st.columns([1,4,1])
