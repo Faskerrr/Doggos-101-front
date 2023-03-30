@@ -78,7 +78,7 @@ with st.expander("See details"):
 
                 #####
                 ##### **Source:**
-                - https://www.kaggle.com/datasets/miljan/stanford-dogs-dataset-traintest
+                - http://vision.stanford.edu/aditya86/ImageNetDogs/
                 """)
     col_img.image(img, caption="Source: https://bit.ly/3G1yblS", width=500)
 
