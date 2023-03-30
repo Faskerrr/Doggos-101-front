@@ -38,6 +38,27 @@ st.markdown("""
             ### Here are summaries and visualizations of Doggos-101's performance""")
 
 
+# ACTIVATION IMAGES
+st.header(":frame_with_picture: Activation images after some convolutional layers")
+with st.expander("See the effects of 12 kernels of the first convolutional layer"):
+    _, col_img1, col_img2, _ = st.columns([0.5,2,2,0.5])
+    image1 = Image.open("./data/activation_img1.png")
+    col_img1.image(image1, width=500)
+    image2 = Image.open("./data/activation_img2.png")
+    col_img2.image(image2, width=500)
+
+with st.expander("See the effects of all kernels of some convolutional layers"):
+    _, col_img, _ = st.columns([1,4,1])
+    image3 = Image.open("./data/activation_img3.png")
+    col_img.image(image3)
+    image4 = Image.open("./data/activation_img4.png")
+    col_img.image(image4)
+    image5 = Image.open("./data/activation_img5.png")
+    col_img.image(image5)
+    image6 = Image.open("./data/activation_img6.png")
+    col_img.image(image6)
+
+
 # DATA
 res = requests.get('https://d3i71xaburhd42.cloudfront.net/b5e3beb791cc17cdaf131d5cca6ceb796226d832/2-Figure1-1.png')
 img = Image.open(BytesIO(res.content))
@@ -78,25 +99,25 @@ with st.expander("See details"):
 
 # CLASSIFICATION REPORT
 # add the classification report
-st.header(":pencil: Classification report")
-with st.expander("See details"):
-    _, col_tab = st.columns([0.5,4])
+# st.header(":pencil: Classification report")
+# with st.expander("See details"):
+#     _, col_tab = st.columns([0.5,4])
 
-    report = pd.read_csv("./data/classification_report.csv")
-    report[["precision","recall","f1-score","support"]] = report[["precision","recall","f1-score","support"]].round(decimals=3)
+#     report = pd.read_csv("./data/classification_report.csv")
+#     report[["precision","recall","f1-score","support"]] = report[["precision","recall","f1-score","support"]].round(decimals=3)
 
-    fig_report = go.Figure(layout=go.Layout(height=800, width=1000),
-                        data=[go.Table(
-                            header=dict(values=list(report.columns),
-                            fill_color='#214660',
-                            font_color= 'white',
-                            align='right'),
-                            cells=dict(values=[report[column] for column in report.columns],
-                            fill_color='#fbf3f6',
-                            align='right'))]
-                        )
-    fig_report.update_layout({'plot_bgcolor': 'rgba(0,0,0,0)', 'paper_bgcolor': 'rgba(0,0,0,0)'}, margin=dict(l=20, r=20, t=20, b=20))
-    col_tab.write(fig_report)
+#     fig_report = go.Figure(layout=go.Layout(height=800, width=1000),
+#                         data=[go.Table(
+#                             header=dict(values=list(report.columns),
+#                             fill_color='#214660',
+#                             font_color= 'white',
+#                             align='right'),
+#                             cells=dict(values=[report[column] for column in report.columns],
+#                             fill_color='#fbf3f6',
+#                             align='right'))]
+#                         )
+#     fig_report.update_layout({'plot_bgcolor': 'rgba(0,0,0,0)', 'paper_bgcolor': 'rgba(0,0,0,0)'}, margin=dict(l=20, r=20, t=20, b=20))
+#     col_tab.write(fig_report)
 
 
 # HORIZONTAL BAR CHARTS
@@ -138,40 +159,19 @@ with st.expander("See details"):
     dog2 = Image.open("./data/dog2.png")
     col_dog2.image(dog2, caption="Siberian husky", width=300)
 
-# CONFUSION MATRIX
-st.header(":nerd_face: Confusion matrix")
-with st.expander("See the table"):
-    # add the confusion matrix table
-    cm = pd.read_csv("./data/confusion_matrix.csv", index_col=0)
-    st.dataframe(data=cm.style.highlight_max(axis=0, color="#c46464"), width=2000, height=1000)
+# # CONFUSION MATRIX
+# st.header(":nerd_face: Confusion matrix")
+# with st.expander("See the table"):
+#     # add the confusion matrix table
+#     cm = pd.read_csv("./data/confusion_matrix.csv", index_col=0)
+#     st.dataframe(data=cm.style.highlight_max(axis=0, color="#c46464"), width=2000, height=1000)
 
-with st.expander("See the figure"):
-    # add the confusion matrix figure
-    fig3, ax = plt.subplots(figsize=(30,30))
-    sns.set_style(style="darkgrid")
-    sns.heatmap(cm, ax=ax, annot=True)
-    st.write(fig3)
+# with st.expander("See the figure"):
+#     # add the confusion matrix figure
+#     fig3, ax = plt.subplots(figsize=(30,30))
+#     sns.set_style(style="darkgrid")
+#     sns.heatmap(cm, ax=ax, annot=True)
+#     st.write(fig3)
 
-    # image = Image.open("./data/confusion_matrix.png")
-    # st.image(image)
-
-
-# ACTIVATION IMAGES
-st.header(":frame_with_picture: Activation images after some convolutional layers")
-with st.expander("See the effects of 12 kernels of the first convolutional layer"):
-    _, col_img1, col_img2, _ = st.columns([0.5,2,2,0.5])
-    image1 = Image.open("./data/activation_img1.png")
-    col_img1.image(image1, width=500)
-    image2 = Image.open("./data/activation_img2.png")
-    col_img2.image(image2, width=500)
-
-with st.expander("See the effects of all kernels of some convolutional layers"):
-    _, col_img, _ = st.columns([1,4,1])
-    image3 = Image.open("./data/activation_img3.png")
-    col_img.image(image3)
-    image4 = Image.open("./data/activation_img4.png")
-    col_img.image(image4)
-    image5 = Image.open("./data/activation_img5.png")
-    col_img.image(image5)
-    image6 = Image.open("./data/activation_img6.png")
-    col_img.image(image6)
+#     # image = Image.open("./data/confusion_matrix.png")
+#     # st.image(image)
