@@ -103,8 +103,9 @@ with st.expander("See details"):
 # with st.expander("See details"):
 #     _, col_tab = st.columns([0.5,4])
 
-#     report = pd.read_csv("./data/classification_report.csv")
-#     report[["precision","recall","f1-score","support"]] = report[["precision","recall","f1-score","support"]].round(decimals=3)
+#inrease indentation by 1 later:
+report = pd.read_csv("./data/classification_report.csv")
+report[["precision","recall","f1-score","support"]] = report[["precision","recall","f1-score","support"]].round(decimals=3)
 
 #     fig_report = go.Figure(layout=go.Layout(height=800, width=1000),
 #                         data=[go.Table(
