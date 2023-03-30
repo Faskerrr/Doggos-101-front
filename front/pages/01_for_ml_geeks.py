@@ -26,9 +26,9 @@ page_bg_img = '''
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # LOGO
-response = requests.get('https://i.ibb.co/7kk5nbG/doggos-loggos-nb.png')
+response = requests.get('https://i.ibb.co/n7zX33C/doggos-loggos-nb-txt.png')
 logo = Image.open(BytesIO(response.content))
-st.image(logo, width=100)
+st.image(logo, width=275)
 
 
 # WELCOME MESSAGE
