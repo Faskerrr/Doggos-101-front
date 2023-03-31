@@ -38,8 +38,7 @@ st.markdown("""
             ### Here you can find the performance metrics of our model""")
 
 
-CLASSIFICATION REPORT
-add the classification report
+# CLASSIFICATION REPORT
 st.header(":pencil: Classification report")
 with st.expander("See details"):
     _, col_tab = st.columns([0.5,4])
