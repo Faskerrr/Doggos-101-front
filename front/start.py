@@ -190,9 +190,8 @@ with left_co:
     option = st.radio('Would you like to provide a file or a link to a photo of the dog?', ('File', 'Link'))
 
 if option == 'File':
-    uploaded_file = st.file_uploader(label='Upload picture of your 🐶',
-                                    type=['png', 'jpeg', 'jpg']
-                                    )
+    uploaded_file = st.file_uploader(type=['png', 'jpeg', 'jpg'])
+    
 elif option == 'Link':
     url_with_pic = st.text_input('Pass url containing picture of your 🐶:')
 
