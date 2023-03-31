@@ -8,7 +8,7 @@ import sys
 import os
 import glob
 
-##########################IGNORE THIS TON OF CODE#################IT IS SUPPOSED TO BE IMPORTED FROM THE FUNCS DIR BUT STREAMLIT ACTS######
+# moved all functions from funcs.py here to avoid streamlit going down
 def clean_description_data(description_data):
     description_data['class'] = description_data['class'].map(str.capitalize)
     description_data['size_of_garden'] = description_data['size_of_garden'].map(lambda x: x.replace('/ medium', ''))
@@ -101,7 +101,7 @@ def get_description(description_data_path, species_name:str):
     return remove_exceptions(descriptions, cleaned_name)
     # .style is necessary so that the output shows the "<br>" introduced in
     #  clean_description_data as linebreaks in the dataframe
-###################################END IGNORING###################################################
+# functions end here
 
 # for deployment
 # path_tmp = os.path.dirname(__file__)
@@ -115,14 +115,9 @@ def get_description(description_data_path, species_name:str):
 
 
 # API_URL = 'http://localhost:8000' # local
-# API_URL = 'https://doggos-101-m7gv5bfljq-ew.a.run.app/'
 # API_URL = 'https://doggos-101selection-m7gv5bfljq-ew.a.run.app/' # new
 API_URL = 'https://doggos-101-m7gv5bfljq-ew.a.run.app' # latest
 
-#select background:
-#https://wallpapercave.com/dwp2x/wp2941797.png
-#https://wallpapercave.com/dwp2x/wp4465167.jpg
-#https://i.ibb.co/TYnGjQN/backg.png
 st.set_page_config(layout='wide',
                    page_title='Doggos-101',
                    page_icon='https://i.ibb.co/7kk5nbG/doggos-loggos-nb.png',
@@ -139,12 +134,12 @@ page_bg_img = '''
 '''
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
-# print our logo? https://i.ibb.co/7kk5nbG/doggos-loggos-nb.png https://i.ibb.co/pzS26yL/doggos-loggos-nb-txt.png
+# print logo
 response = requests.get('https://i.ibb.co/n7zX33C/doggos-loggos-nb-txt.png')
 logo = Image.open(BytesIO(response.content))
 st.image(logo, width=275)
 
-# set css for tables:
+# optional css for tables:
 # https://discuss.streamlit.io/t/unable-to-center-table-cell-values-with-pandas-style-need-input-to-see-if-this-is-even-possible-with-streamlit/31852
 # th_props = [
 #   ('font-size', '14px'),
@@ -188,13 +183,6 @@ st.write('## Get breed predictions for a dog')
 # preload names of example images:
 ex_names = [i[:-7].lower() for i in os.listdir('example_images/')]
 rename_ex = pd.DataFrame({'col1': os.listdir('example_images/')}, index=ex_names)
-
-# temporal for testing
-# st.write('Test url1 (working): https://www.purina.co.uk/sites/default/files/2022-07/French-Bulldog.jpg')
-# st.write('Test url2 Scotch (working): https://i.ibb.co/qkPPHgR/IMAGE-2023-03-26-01-47-08.jpg')
-# st.write('Test url3 WestHighland (working): https://i.ibb.co/TT1zCxZ/IMAGE-2023-03-26-01-50-15.jpg')
-# st.write('Test url4 (not working locally): https://www.aspcapetinsurance.com/media/2325/facts-about-maltese-dogs.jpg')
-# st.write('Test url4 (png): https://i.ibb.co/6bMDVSb/1.png')
 
 left_co, cent_co, last_co = st.columns(3)
 
@@ -240,7 +228,6 @@ if option == 'Link' and url_with_pic:
             st.write('Ooops... The request timed out, please check your url or try another')
             url_with_pic = None
 
-# TODO: sometimes we get img of size ... cannot be reshaped into array (-1,224,224,3) - try logo doggos-101
 if option == 'Link' and url_with_pic:
     with cent_co:
         with st.spinner('Barking...'):
@@ -264,11 +251,6 @@ if option == 'Link' and url_with_pic:
         ex1_png = glob.glob(f'''example_images/{rename_ex.loc[prediction_og['prediction']['first'].lower(), 'col1']}''')
         ex2_png = glob.glob(f'''example_images/{rename_ex.loc[prediction_og['prediction']['second'].lower(), 'col1']}''')
         ex3_png = glob.glob(f'''example_images/{rename_ex.loc[prediction_og['prediction']['third'].lower(), 'col1']}''')
-
-        # Use that to display references from url's:
-
-        # response1 = requests.get('https://i.ibb.co/qkPPHgR/IMAGE-2023-03-26-01-47-08.jpg', timeout=7) #tmp
-        # ex1_url = Image.open(BytesIO(response1.content))
 
         if prediction_og['score']['first'] > 0 and prediction_og['score']['second'] > 0 and prediction_og['score']['third'] > 0:
 
@@ -352,11 +334,6 @@ elif option == 'File' and uploaded_file:
         ex1_png = glob.glob(f'''example_images/{rename_ex.loc[prediction_og['prediction']['first'].lower(), 'col1']}''')
         ex2_png = glob.glob(f'''example_images/{rename_ex.loc[prediction_og['prediction']['second'].lower(), 'col1']}''')
         ex3_png = glob.glob(f'''example_images/{rename_ex.loc[prediction_og['prediction']['third'].lower(), 'col1']}''')
-
-        # Use that to display references from url's:
-
-        # response1 = requests.get('https://i.ibb.co/qkPPHgR/IMAGE-2023-03-26-01-47-08.jpg', timeout=7) #tmp
-        # ex1_url = Image.open(BytesIO(response1.content))
 
         if prediction_og['score']['first'] > 0 and prediction_og['score']['second'] > 0 and prediction_og['score']['third'] > 0:
 
