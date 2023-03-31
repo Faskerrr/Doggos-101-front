@@ -69,10 +69,10 @@ with st.expander("See the table"):
 
 with st.expander("See the figure"):
     # add the confusion matrix figure
-    fig3, ax = plt.subplots(figsize=(30,30))
-    sns.set_style(style="darkgrid")
-    sns.heatmap(cm, ax=ax, annot=True)
-    st.write(fig3)
+#     fig3, ax = plt.subplots(figsize=(30,30))
+#     sns.set_style(style="darkgrid")
+#     sns.heatmap(cm, ax=ax, annot=True)
+#     st.write(fig3)
 
-    # image = Image.open("./data/confusion_matrix.png")
-    # st.image(image)
+    image = Image.open("./data/confusion_matrix.png")
+    st.image(image)
