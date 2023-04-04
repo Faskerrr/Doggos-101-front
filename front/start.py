@@ -134,6 +134,13 @@ page_bg_img = '''
 '''
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
+# Add Link to your repo
+'''
+    [![Repo](https://badgen.net/badge/icon/GitHub?icon=github&label)](https://github.com/Faskerrr/Doggos-101) 
+
+'''
+st.markdown("<br>",unsafe_allow_html=True)
+
 # print logo
 response = requests.get('https://i.ibb.co/n7zX33C/doggos-loggos-nb-txt.png')
 logo = Image.open(BytesIO(response.content))
