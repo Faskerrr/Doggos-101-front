@@ -134,17 +134,17 @@ page_bg_img = '''
 '''
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
+# print logo
+response = requests.get('https://i.ibb.co/n7zX33C/doggos-loggos-nb-txt.png')
+logo = Image.open(BytesIO(response.content))
+st.image(logo, width=275)
+
 # Add Link to your repo
 '''
     [![Repo](https://badgen.net/badge/icon/GitHub?icon=github&label)](https://github.com/Faskerrr/Doggos-101) 
 
 '''
 st.markdown("<br>",unsafe_allow_html=True)
-
-# print logo
-response = requests.get('https://i.ibb.co/n7zX33C/doggos-loggos-nb-txt.png')
-logo = Image.open(BytesIO(response.content))
-st.image(logo, width=275)
 
 # optional css for tables:
 # https://discuss.streamlit.io/t/unable-to-center-table-cell-values-with-pandas-style-need-input-to-see-if-this-is-even-possible-with-streamlit/31852
