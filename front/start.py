@@ -182,7 +182,6 @@ st.image(logo, width=275)
 #     dict(selector='th.col_heading.level0', props=headers_props),
 #     dict(selector='th.col_heading.level1', props=td_props)
 # ]
-
 #_______________________________________________________________________________
 # Code the page:
 
