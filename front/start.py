@@ -116,7 +116,8 @@ def get_description(description_data_path, species_name:str):
 
 # API_URL = 'http://localhost:8000' # local
 # API_URL = 'https://doggos-101selection-m7gv5bfljq-ew.a.run.app/' # new
-API_URL = 'https://doggos-101-m7gv5bfljq-ew.a.run.app' # latest
+# API_URL = 'https://doggos-101-m7gv5bfljq-ew.a.run.app' # last
+API_URL = 'https://doggos-101-xtsvdgg5yq-uc.a.run.app' # latest
 
 st.set_page_config(layout='wide',
                    page_title='Doggos-101',
@@ -136,7 +137,7 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # Add Link to your repo
 '''
-    [![Repo](https://badgen.net/badge/icon/GitHub?icon=github&label)](https://github.com/Faskerrr/Doggos-101) 
+    [![Repo](https://badgen.net/badge/icon/GitHub?icon=github&label)](https://github.com/Faskerrr/Doggos-101)
 
 '''
 st.markdown("<br>",unsafe_allow_html=True)
@@ -181,7 +182,6 @@ st.image(logo, width=275)
 #     dict(selector='th.col_heading.level0', props=headers_props),
 #     dict(selector='th.col_heading.level1', props=td_props)
 # ]
-
 #_______________________________________________________________________________
 # Code the page:
 
@@ -198,7 +198,7 @@ with left_co:
 
 if option == 'File':
     uploaded_file = st.file_uploader(label='select file', type=['png', 'jpeg', 'jpg'], label_visibility='collapsed')
-    
+
 elif option == 'Link':
     url_with_pic = st.text_input('Pass url containing picture of your 🐶:')
 
