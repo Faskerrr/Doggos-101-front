@@ -5,4 +5,4 @@ secondaryBackgroundColor="#dcf3f4"
 textColor="#123c69"
 
 [deprecation]
-showfileUploaderEncoding = False
+showfileUploaderEncoding=false
